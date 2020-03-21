@@ -106,11 +106,11 @@
 
 ### Programming languages, tools & frameworks
   
-| C#            | JAVA        | Python  | Javascript  | PHP     | SQL         | Tools |
-| ---           | ---         | ---     | ---         | ---     | ---         | --- |
-| Xamarin       | Spring MVC  | Flask   | Nodejs      | Symfony | PostgreSQL  | Bootstrap |
-| ASP.NET Core  | Hibernate   |         | React       |         | MongoDB     | GIT |
-| Unity         | Android     |         | Jquery      |         | MySQL       | Jenkins |
+| C#            | JAVA        | Python  | Javascript  | SQL         | Tools |
+| ---           | ---         | ---     | ---         | ---         | --- |
+| Xamarin       | Spring MVC  | Flask   | Angular     | PostgreSQL  | Bootstrap |
+| ASP.NET Core  | Hibernate   |         | React       | MongoDB     | GIT |
+| Unity         | Android     |         | Nodejs      | MySQL       | Jenkins |
 
 
 # MISCELLANEOUS
