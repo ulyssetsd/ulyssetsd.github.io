@@ -8,10 +8,17 @@
 [CV](ulyssetassidis.pdf)
 
 # Experience
-### JAVA/C# Software Developer @ Greenfinch Technology
-`July 2019 • Now - Dublin, Ireland`
 
-> Web and Mobile Development mainly in C#: Xamarin Mobile App, ASP.NET Core for API backend and front end in Angular. Some Java Web development as well: Java 8, Spring, Hibernate, MySQL, Mockito/JUnit. Tools: Github, Jira and Azure DevOps for CI/CD. Take part in Solution Design and Business analysis with client/end users.
+### Technical Lead Xamarin @ Greenfinch Technology
+`April 2020 • Now - Dublin, Ireland`
+
+> Technical Lead on mobile app project using Xamarin. Responsible of App Store deployments, DevOps, onboarding, code review, and supporting management on planning product development, timelines and budget.
+> Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations.
+
+### JAVA/C# Software Developer @ Greenfinch Technology
+`July 2019 • March 2020 - Dublin, Ireland`
+
+> Web and Mobile Development mainly in C#: Xamarin Mobile App, ASP.NET Core for API backend and front end in Angular. Some Java Web development as well: Java 8, Spring, Hibernate, MySQL, Mockito/JUnit. Tools: Github, Jira, Azure Devops CI/CD
 
 ### C# Software Developer @ IMEC Technologies
 `March 2019 • July 2019 - Dublin, Ireland`
@@ -102,15 +109,16 @@
 - **FRENCH**: native speaker
 - **ENGLISH**: (C1) Highly proficient in spoken and written english
   - **Certification TOEIC®** with score of **905** 
+  - live in Ireland since Feb 2019
 - **CHINESE MANDARIN**: Basic communication
 
 ### Programming languages, tools & frameworks
   
 | C#            | JAVA        | Python  | Javascript  | SQL         | Tools |
 | ---           | ---         | ---     | ---         | ---         | --- |
-| Xamarin       | Spring MVC  | Flask   | Angular     | PostgreSQL  | Bootstrap |
-| ASP.NET Core  | Hibernate   |         | React       | MongoDB     | GIT |
-| Unity         | Android     |         | Nodejs      | MySQL       | Jenkins |
+| Xamarin       | Spring MVC  | Flask   | Angular     | PostgreSQL  | Github |
+| ASP.NET Core  | Hibernate   |         | React       | MongoDB     | Azure DevOps |
+| Unity         | Android     |         | Nodejs      | MySQL       | Jira |
 
 
 # MISCELLANEOUS
