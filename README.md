@@ -1,6 +1,6 @@
 # Ulysse Tassidis
 
-*French Software Engineer working in Dublin*
+*C# Software Engineer working in Paris*
 
 [Email](mailto:utassidis@gmail.com) - 
 [Github](https://github.com/ulyssetsd/) -
@@ -9,13 +9,13 @@
 
 # Experience
 
-### Technical Lead Xamarin @ Greenfinch Technology
-`April 2020 • Now - Dublin, Ireland`
+### Technical Lead Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
+`April 2020 • Now - Dublin, Ireland - based in Paris since October 2020`
 
-> Technical Lead on mobile app project using Xamarin. Responsible of App Store deployments, DevOps, onboarding, code review, and supporting management on planning product development, timelines and budget.
+> Technical Lead on mobile app project using Xamarin.Forms. Responsible of App Store deployments, DevOps, onboarding, code review, and supporting management on planning product development, timelines and budget.
 > Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations.
 
-### JAVA/C# Software Developer @ Greenfinch Technology
+### JAVA/C# Software Developer @ Greenfinch Technology 
 `July 2019 • March 2020 - Dublin, Ireland`
 
 > Web and Mobile Development mainly in C#: Xamarin Mobile App, ASP.NET Core for API backend and front end in Angular. Some Java Web development as well: Java 8, Spring, Hibernate, MySQL, Mockito/JUnit. Tools: Github, Jira, Azure Devops CI/CD
