@@ -1,6 +1,6 @@
 # Ulysse Tassidis
 
-*C# Software Engineer working in Paris*
+*Software Engineer working in Paris*
 
 [Email](mailto:utassidis@gmail.com) - 
 [Github](https://github.com/ulyssetsd/) -
