@@ -10,7 +10,7 @@
 # Experience
 
 ### Technical Lead Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
-`April 2020 • Now - Dublin, Ireland - based in Paris since October 2020`
+`April 2020 • Now - Dublin, Ireland - Paris, France since October 2020`
 
 > Technical Lead on mobile app project using Xamarin.Forms. Responsible of App Store deployments, DevOps, onboarding, code review, and supporting management on planning product development, timelines and budget.
 > Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations.
