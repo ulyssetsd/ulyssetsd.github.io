@@ -10,9 +10,9 @@
 # Experience
 
 ### Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
-`April 2020 • Now - Dublin, Ireland - Paris, France since October 2020`
-
-> Lead dev on mobile app project using Xamarin.Forms. Responsible of App Store deployments, DevOps, onboarding, code review, and supporting management on planning product development, timelines and budget.
+`April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020`
+ 
+> Lead Dev on mobile app project using Xamarin.Forms. Responsible of App Store / Azure Cloud deployments, Azure DevOps (CI/CD), onboarding, code review, and supporting management on planning product development, timelines and budget.
 > Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations.
 
 ### JAVA/C# Software Developer @ Greenfinch Technology 
@@ -114,11 +114,11 @@
 
 ### Programming languages, tools & frameworks
   
-| C#            | JAVA        | Python  | Javascript  | SQL         | Tools |
-| ---           | ---         | ---     | ---         | ---         | --- |
-| Xamarin       | Spring MVC  | Flask   | Angular     | PostgreSQL  | Github |
-| ASP.NET Core  | Hibernate   |         | React       | MongoDB     | Azure DevOps |
-| Unity         | Android     |         | Nodejs      | MySQL       | Jira |
+| C#                 | JAVA        | Python  | Javascript  | SQL         | Tools |
+| ---                | ---         | ---     | ---         | ---         | --- |
+| .NET Core & .NET 6 | Spring Boot | Flask   | Angular     | PostgreSQL  | Github |
+| Xamarin            | Hibernate   |         | React       | MongoDB     | Azure DevOps |
+| Unity              | Android     |         | Nodejs      | MySQL       | Azure Coud |
 
 
 # MISCELLANEOUS
@@ -126,7 +126,7 @@
 - Driving License 
 - Musician from 2014 to 2018 
   - I manage my music band and took care of the organization during the 4 years. We released two albums and made more than thirty lives across France and England. 
-- Fitness and running 
+- Fitness and climbing 
 - Asia
   - Passionate about Asian culture and travel, I love getting out of my comfort zone and organizing my travels for me and my friends across 8 Asian countries.
 
