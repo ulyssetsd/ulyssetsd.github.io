@@ -13,7 +13,7 @@
 `April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020`
  
 > Lead Dev on mobile app project using Xamarin.Forms. Responsible of App Store / Azure Cloud deployments, Azure DevOps (CI/CD), onboarding, code review, and supporting management on planning product development, timelines and budget.
-> Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations.
+> Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy and estimations. Tools: Azure Functions, Docker, .NET Core & .NET 6
 
 ### JAVA/C# Software Developer @ Greenfinch Technology 
 `July 2019 • March 2020 - Dublin, Ireland`
@@ -117,8 +117,8 @@
 | C#                 | JAVA        | Python  | Javascript  | SQL         | Tools |
 | ---                | ---         | ---     | ---         | ---         | --- |
 | .NET Core & .NET 6 | Spring Boot | Flask   | Angular     | PostgreSQL  | Github |
-| Xamarin            | Hibernate   |         | React       | MongoDB     | Azure DevOps |
-| Unity              | Android     |         | Nodejs      | MySQL       | Azure Coud |
+| Xamarin            | Hibernate   |         | React       | MongoDB     | Azure Cloud & DevOps |
+| Unity              | Android     |         | Nodejs      | MySQL       | Docker |
 
 
 # MISCELLANEOUS
