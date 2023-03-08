@@ -7,6 +7,28 @@
 [LinkedIn](https://linkedin.com/in/ulyssetassidis/) - 
 [CV](ulyssetassidis.pdf)
 
+# Experience V2
+
+Lead Dev C# / Angular @ Bouygues Telecom
+November 2022 • Now - Paris, France
+
+Lead Dev on full-stack apps inside microservices architecture, using dot net 6, Dapper, SQL Server on the back and Angular for the front. Software Craftsmanship team of 5 devs using clean code and TDD.
+
+Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
+April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020
+
+Lead Dev on mobile apps project using Xamarin.Forms. Responsible for App Store / Azure Cloud deployments, Azure DevOps (CI/CD), onboarding, code review, and supporting management on planning product development, timelines, and budget. Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy, and estimations. Tools: Azure Functions, Docker, .NET Core & .NET 6
+
+JAVA/C# Software Developer @ Greenfinch Technology
+July 2019 • March 2020 - Dublin, Ireland
+
+Web and Mobile Development mainly in C#: Xamarin Mobile App, ASP.NET Core for API backend and front end in Angular. Some Java Web development as well: Java 8, Spring, Hibernate, MySQL, Mockito/JUnit. Tools: Github, Jira, Azure DevOps CI/CD
+
+C# Software Developer @ IMEC Technologies
+March 2019 • July 2019 - Dublin, Ireland
+
+Mobile development using Xamarin and web using ASP.NET to build Android, Windows, and iOS applications with a C# core base. Continuous Integration using GIT and Azure DevOps services. MVVM patterns to unit test the UI. Setting up CI and CD pipelines in Azure DevOps.
+
 # Experience
 
 ### Lead Dev C# / Angular @ Bouygues Telecom
