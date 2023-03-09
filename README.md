@@ -10,24 +10,35 @@
 # Experience V2
 
 Lead Dev C# / Angular @ Bouygues Telecom
-November 2022 • Now - Paris, France
+November 2022 • Present - Paris, France
 
-Lead Dev on full-stack apps inside microservices architecture, using dot net 6, Dapper, SQL Server on the back and Angular for the front. Software Craftsmanship team of 5 devs using clean code and TDD.
+- Lead a team of five developers to create full-stack applications using .NET 6,
+Dapper, SQL Server and Angular within a microservices architecture
+- Apply software craftsmanship principles such as clean code and TDD to ensure high-quality code delivery
+- Collaborate with product owners and stakeholders to define requirements,
+design solutions and deliver features
 
 Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
 April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020
 
-Lead Dev on mobile apps project using Xamarin.Forms. Responsible for App Store / Azure Cloud deployments, Azure DevOps (CI/CD), onboarding, code review, and supporting management on planning product development, timelines, and budget. Take part in Solution Design and Business analysis with client/end users. Define uses cases, architecture, deployment strategy, and estimations. Tools: Azure Functions, Docker, .NET Core & .NET 6
+- Lead mobile app development projects using Xamarin.Forms for iOS, Android and Windows platforms
+- Manage App Store / Azure Cloud deployments,
+Azure DevOps (CI/CD), code reviews and onboarding processes
+- Participate in solution design and business analysis with clients/end users to define use cases, architecture, deployment strategy and estimations
 
 JAVA/C# Software Developer @ Greenfinch Technology
-July 2019 • March 2020 - Dublin, Ireland
+July 2019 • March 2020 - Dublin,
+Ireland
 
-Web and Mobile Development mainly in C#: Xamarin Mobile App, ASP.NET Core for API backend and front end in Angular. Some Java Web development as well: Java 8, Spring, Hibernate, MySQL, Mockito/JUnit. Tools: Github, Jira, Azure DevOps CI/CD
+- Develop web and mobile applications using C# (.NET Core, Xamarin), Angular, Java (Spring, Hibernate) and MySQL databases
+- Use Github, Jira and Azure DevOps CI/CD tools for version control, issue tracking and continuous integration/delivery
 
 C# Software Developer @ IMEC Technologies
-March 2019 • July 2019 - Dublin, Ireland
+March 2019 • July 2019 - Dublin,Ireland
 
-Mobile development using Xamarin and web using ASP.NET to build Android, Windows, and iOS applications with a C# core base. Continuous Integration using GIT and Azure DevOps services. MVVM patterns to unit test the UI. Setting up CI and CD pipelines in Azure DevOps.
+- Build cross-platform mobile applications using Xamarin and web applications using ASP.NET for various clients in different industries
+- Set up CI/CD pipelines in Azure DevOps 
+and use MVVM patterns to unit test the UI components
 
 # Experience
 
