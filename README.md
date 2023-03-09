@@ -32,7 +32,7 @@
 > Use Github, Jira and Azure DevOps CI/CD tools for version control, issue tracking and continuous integration/delivery.
 
 ### C# Software Developer @ IMEC Technologies
-March 2019 • July 2019 - Dublin,Ireland
+`March 2019 • July 2019 - Dublin, Ireland`
 
 > Build cross-platform mobile applications using Xamarin and web applications using ASP.NET for various clients in different industries.
 > Set up CI/CD pipelines in Azure DevOps and use MVVM patterns to unit test the UI components.
