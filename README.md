@@ -12,7 +12,8 @@
 ### Lead Dev C# / Angular @ Bouygues Telecom
 `November 2022 • Now - Paris, France`
 
-> Lead Dev on full-stack apps inside microservices architecture, using dot net 6, Dapper, SQL Server on the back and Angular 15 for the front. Software Craftsmanship team of 5 devs using clean code and TDD.
+> Lead Dev on full-stack applications within a microservices architecture, focusing on network performance. Aggregating data from the entire 2G, 3G, 4G, and 5G network in France, we calculate KPIs and provide this data through visualizations and alerting tools.
+> Technologies include .NET 6/8, Dapper, SQL Server for the backend, and Angular 15 for the frontend. Addressing large-scale data challenges and performance issues. Part of a Software Craftsmanship team of 5 developers, emphasizing clean code and TDD. Infrastructure tools include GitLab, Kubernetes, and Grafana (Loki).
 
 ### Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
 `April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020`
