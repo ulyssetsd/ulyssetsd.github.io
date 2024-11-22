@@ -101,7 +101,7 @@
 > Augmented Reality gaming Project conducted within ESIEE Paris for Artefact Event. Artefact Event has a HoloLens and wanted a gaming experience covering specific needs. The project combines QR code detection, voice recognition, environmental control (room scan), and Unity... The biggest challenges were being able to combine all the technologies and adapt to software from the HoloLens which was constantly updating. We used Git and the HoloLens community to overcome these difficulties.
 
 ### Website - Empty House
-`Feb 2016 • Mar 2016` - [project link](http://emptyhouse.fr/)
+`Feb 2016 • Mar 2016`
 
 > I made the website, from conception to deployment through design and development. Website in HTML5 / CSS3 and JQUERY with the use of the CSS framework Materialized. I learn to deploy online a website and I had to implement some code to simplify my update of the website.
 
