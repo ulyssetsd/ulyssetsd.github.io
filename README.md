@@ -136,3 +136,6 @@
 - Asia
   - Passionate about Asian culture and travel, I love getting out of my comfort zone and organizing my travels for me and my friends across 8 Asian countries.
 
+---
+
+*This website is automatically built with Jekyll and deployed on a self-hosted Kubernetes using GitOps.*
