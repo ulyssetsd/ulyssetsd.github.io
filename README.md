@@ -22,7 +22,7 @@
 
 > Lead mobile app development projects using Xamarin.Forms for iOS, Android and Windows platforms.
 > Manage App Store / Azure Cloud deployments, Azure DevOps (CI/CD), code reviews and onboarding processes.
-> Participate in solution design and business analysis with clients/end users to define use cases, architecture, deployment strategy and estimations.
+> Participate in solution design and business analysis with clients/end users to define use cases, architecture, deployment strategy, and estimations.
 
 
 ### JAVA/C# Software Developer @ Greenfinch Technology
