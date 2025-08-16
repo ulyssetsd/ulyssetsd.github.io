@@ -14,7 +14,7 @@
 
 > Lead a team of five developers to create full-stack applications using .NET 6, Dapper, SQL Server, and Angular within a microservices architecture.
 > Apply software craftsmanship principles such as clean code and TDD to ensure high-quality code delivery.
-> Collaborate with product owners and stakeholders to define requirements, design solutions and deliver features
+> Collaborate with product owners and stakeholders to define requirements, design solutions and deliver features.
 
 
 ### Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
