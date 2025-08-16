@@ -9,8 +9,22 @@
 
 # Experience
 
+### Lead Dev C# / Angular @ WEDA (VIDAL Group)
+`May 2025 • Now - Issy-les-Moulineaux, France (Hybrid)`
+
+> Lead Dev for the "Medical" feature team managing 4 senior developers (2 internal, 2 contractors) working on healthcare messaging solutions integrated into Weda's electronic health record software used by 20% of general practitioners in France. Brought structure and technical leadership to a previously autonomous team, establishing unified development standards and architectural vision.
+> 
+> Responsibilities include:
+> - Collaborating with Product Owners on roadmap planning, feature prioritization, and scope management
+> - Orchestrating the transition from legacy monolithic .NET Framework codebase to modern microservices architecture
+> - Implementing technical standards and best practices for both backend (.NET 8) and frontend (Angular) development
+> - Direct reporting to CTO while providing technical mentorship to team members
+> - Addressing performance challenges in a system handling 20,000 requests/sec and managing 40TB of sensitive medical data
+> 
+> Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Grafana, Prometheus, Sentry, Graylog for production monitoring.
+
 ### Lead Dev C# / Angular @ Bouygues Telecom
-`November 2022 • Present - Paris, France`
+`November 2022 • April 2025 - Paris, France
 
 > Lead a team of five developers to create full-stack applications using .NET 6, Dapper, SQL Server, and Angular within a microservices architecture.
 > Apply software craftsmanship principles such as clean code and TDD to ensure high-quality code delivery.
