@@ -21,7 +21,7 @@
 > - Direct reporting to CTO while providing technical mentorship to team members
 > - Addressing performance challenges in a system handling 20,000 requests/sec and managing 40TB of sensitive medical data
 > 
-> Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Grafana, Prometheus, Sentry, Graylog for production monitoring.
+> Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Redis, Grafana, Prometheus, Sentry, Graylog for production monitoring.
 
 ### Lead Dev C# / Angular @ Bouygues Telecom
 `November 2022 • April 2025 - Paris, France
