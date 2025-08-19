@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ulyssetsd-github-io
+  namespace: ulyssetsd-github-io
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/redirect-to-https: "true"
+spec:
+  tls:
+  - hosts:
+    - ulyssetassidis.fr
+    - www.ulyssetassidis.fr
+    secretName: ulyssetsd-github-io-tls
+  rules:
+  - host: ulyssetassidis.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ulyssetsd-github-io
+            port:
+              number: 80
+  - host: www.ulyssetassidis.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ulyssetsd-github-io
+            port:
+              number: 80

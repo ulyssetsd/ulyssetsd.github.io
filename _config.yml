@@ -1,0 +1,26 @@
+title: Ulysse Tassidis
+description: Software Engineer working in Paris
+
+# Build settings
+markdown: kramdown
+
+# Explicitly disable GitHub-specific features
+github:
+  is_project_page: false
+  is_user_page: false
+
+plugins:
+  - jekyll-seo-tag
+
+# Site settings
+locale: "en-US"
+name: "Ulysse Tassidis"
+repository: "ulyssetsd/ulyssetsd.github.io"
+
+# SEO
+url: "https://ulyssetassidis.fr"
+baseurl: ""
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

@@ -30,6 +30,8 @@
 > Apply software craftsmanship principles such as clean code and TDD to ensure high-quality code delivery.
 > Collaborate with product owners and stakeholders to define requirements, design solutions and deliver features.
 
+> Lead Dev on full-stack applications within a microservices architecture, focusing on network performance. Aggregating data from the entire 2G, 3G, 4G, and 5G network in France, we calculate KPIs and provide this data through visualizations and alerting tools.
+> Technologies include .NET 6/8, Dapper, SQL Server for the backend, and Angular 15 for the frontend. Addressing large-scale data challenges and performance issues. Part of a Software Craftsmanship team of 5 developers, emphasizing clean code and TDD. Infrastructure tools include GitLab, Kubernetes, and Grafana (Loki).
 
 ### Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
 `April 2020 • June 2022 - Dublin, Ireland - Paris, France since October 2020`
@@ -122,7 +124,7 @@
 > Augmented Reality gaming Project conducted within ESIEE Paris for Artefact Event. Artefact Event has a HoloLens and wanted a gaming experience covering specific needs. The project combines QR code detection, voice recognition, environmental control (room scan), and Unity... The biggest challenges were being able to combine all the technologies and adapt to software from the HoloLens which was constantly updating. We used Git and the HoloLens community to overcome these difficulties.
 
 ### Website - Empty House
-`Feb 2016 • Mar 2016` - [project link](http://emptyhouse.fr/)
+`Feb 2016 • Mar 2016`
 
 > I made the website, from conception to deployment through design and development. Website in HTML5 / CSS3 and JQUERY with the use of the CSS framework Materialized. I learn to deploy online a website and I had to implement some code to simplify my update of the website.
 
@@ -157,3 +159,6 @@
 - Asia
   - Passionate about Asian culture and travel, I love getting out of my comfort zone and organizing my travels for me and my friends across 8 Asian countries.
 
+---
+
+*This website is automatically built with Jekyll and deployed on a self-hosted Kubernetes using GitOps.*
