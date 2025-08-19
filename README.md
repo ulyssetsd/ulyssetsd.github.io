@@ -28,6 +28,7 @@
 
 > Led a team of five developers to build full-stack applications within a microservices architecture, focusing on network performance and large-scale data challenges. Aggregated data from France's 2G, 3G, 4G, and 5G networks to calculate KPIs and provide visualizations and alerting tools.
 > Applied software craftsmanship principles (clean code, TDD) to ensure high-quality delivery while collaborating with product owners and stakeholders to define requirements and deliver features.
+>
 > Technologies: .NET 6/8, Dapper, SQL Server, Angular 15, GitLab, Kubernetes, Grafana (Loki).
 
 ### Lead Dev Mobile C# @ TEKenable Ltd (formerly Greenfinch Technology)
