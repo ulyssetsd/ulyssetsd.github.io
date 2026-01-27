@@ -3,6 +3,7 @@ description: Software Engineer working in Paris
 
 # Build settings
 markdown: kramdown
+theme: jekyll-theme-primer
 
 # Explicitly disable GitHub-specific features
 github:
