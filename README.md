@@ -12,16 +12,16 @@
 ### Lead Dev C# / Angular @ WEDA (VIDAL Group)
 `May 2025 • Now - Issy-les-Moulineaux, France (Hybrid)`
 
-> Lead Dev for the "Medical" feature team managing 4 senior developers (2 internal, 2 contractors) working on healthcare messaging solutions integrated into Weda's electronic health record software used by 20% of general practitioners in France. Brought structure and technical leadership to a previously autonomous team, establishing unified development standards and architectural vision.
-> 
-> Responsibilities include:
-> - Collaborating with Product Owners on roadmap planning, feature prioritization, and scope management
-> - Orchestrating the transition from legacy monolithic .NET Framework codebase to modern microservices architecture
-> - Implementing technical standards and best practices for both backend (.NET 8) and frontend (Angular) development
-> - Direct reporting to CTO while providing technical mentorship to team members
-> - Addressing performance challenges in a system handling 20,000 requests/sec and managing 40TB of sensitive medical data
-> 
-> Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Redis, Grafana, Prometheus, Sentry, Graylog for production monitoring.
+> Led the Medical team (4–5 developers) on secure healthcare messaging (MSSanté v2) within Weda's EHR used by ~15,000 physicians. Joined during production instability and restored structure, delivery capacity, and reliability.
+>
+> - Crisis stabilization: Took over post-critical release with 40k+ Sentry errors, led root-cause analysis, hotfix strategy, and progressive quality improvements
+> - Migration & delivery: Piloted MSSanté v1→v2 migration (API LPS, data migration, SQL linked-server removal) and delivered secretary delegation feature across incremental releases
+> - Technical evolution: Contributed to gradual modernization from legacy .NET Framework to .NET 8 APIs while maintaining backward compatibility and system stability
+> - Team & process: Established engineering standards (poker planning, INVEST stories, 2-reviewer PR policy, pre-grooming with POs) and provided technical mentorship through regular 1-to-1s and pair programming. Led recruitment process for new developers (job description, technical interviews)
+> - Release ownership: Managed production releases, coordinated with Ops/DBA, monitored via Sentry/Graylog/Dynatrace
+> - Strategic contribution: Led Ségur v2 macro-estimation (465 MD) and CDA compliance work with domain experts
+>
+> Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Redis, Sentry, Graylog, Dynatrace, Grafana/Prometheus
 
 ### Lead Dev C# / Angular @ Bouygues Telecom
 `November 2022 • April 2025 - Paris, France
