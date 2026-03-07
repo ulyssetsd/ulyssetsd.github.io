@@ -63,6 +63,10 @@ jobs:
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
+        git config --global credential.helper store
+        
+        # Store credentials for git push
+        echo "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
         
         # Update the timestamp annotation in the current repo
         TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
@@ -74,5 +78,5 @@ jobs:
         else
           git add k8s/deployment.yaml
           git commit -m "chore: trigger deployment restart - $TIMESTAMP"
-          git push
+          git push origin main
         fi
