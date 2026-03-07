@@ -57,3 +57,22 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+
+    - name: Update deployment with timestamp (trigger Kubernetes rollout)
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push' && github.actor != 'github-actions[bot]'
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        
+        # Update the timestamp annotation in the current repo
+        TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+        sed -i "s/deployment.kubernetes.io\/restart: .*/deployment.kubernetes.io\/restart: \"$TIMESTAMP\"/g" k8s/deployment.yaml
+        
+        # Commit and push if there are changes
+        if git diff --quiet; then
+          echo "No changes needed"
+        else
+          git add k8s/deployment.yaml
+          git commit -m "chore: trigger deployment restart - $TIMESTAMP"
+          git push
+        fi

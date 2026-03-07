@@ -17,6 +17,8 @@ spec:
     metadata:
       labels:
         app: ulyssetsd-github-io
+      annotations:
+        deployment.kubernetes.io/restart: "2026-03-07T00:00:00Z"
     spec:
       containers:
       - name: website
