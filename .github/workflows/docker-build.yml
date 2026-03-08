@@ -82,17 +82,24 @@ jobs:
         node-version: 22
         cache: npm
 
-    - name: Install dependencies
-      run: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm ci --include=dev
+    - name: Install Chromium for PDF generation
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends chromium-browser
+        echo "PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser)" >> $GITHUB_ENV
 
-    - name: Build HTML
-      run: npm run build
+    - name: Install dependencies
+      run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
+
+    - name: Build HTML and PDF
+      run: npm run build && npm run pdf
 
     - name: Prepare Pages artifact
       run: |
         mkdir -p _site
         cp index.html _site/index.html
         cp resume.json _site/resume.json
+        cp resume.pdf _site/resume.pdf
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
