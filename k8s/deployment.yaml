@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: ghcr.io/ulyssetsd/ulyssetsd.github.io:sha-752ff8e # {"$imagepolicy": "flux-system:ulyssetsd-github-io"}
+        image: ghcr.io/ulyssetsd/ulyssetsd.github.io:sha-d6b3937 # {"$imagepolicy": "flux-system:ulyssetsd-github-io"}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
