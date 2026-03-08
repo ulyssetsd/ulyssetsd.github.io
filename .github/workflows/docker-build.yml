@@ -14,7 +14,6 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
       packages: write
 
     steps:
@@ -39,7 +38,7 @@ jobs:
         tags: |
           type=ref,event=branch
           type=ref,event=pr
-          type=sha,prefix={{branch}}-
+          type=sha,prefix=main-,enable={{is_default_branch}}
           type=raw,value=latest,enable={{is_default_branch}}
 
     - name: Set up Docker Buildx
@@ -57,26 +56,3 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
-
-    - name: Update deployment with timestamp (trigger Kubernetes rollout)
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push' && github.actor != 'github-actions[bot]'
-      run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
-        git config --global credential.helper store
-        
-        # Store credentials for git push
-        echo "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
-        
-        # Update the timestamp annotation in the current repo
-        TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-        sed -i "s/deployment.kubernetes.io\/restart: .*/deployment.kubernetes.io\/restart: \"$TIMESTAMP\"/g" k8s/deployment.yaml
-        
-        # Commit and push if there are changes
-        if git diff --quiet; then
-          echo "No changes needed"
-        else
-          git add k8s/deployment.yaml
-          git commit -m "chore: trigger deployment restart - $TIMESTAMP"
-          git push origin main
-        fi
