@@ -1,26 +1,30 @@
-# Builder stage: use multi-arch Ruby base and install Jekyll deps
-FROM ruby:3.3-slim AS builder
+# Builder stage: Node.js to generate static HTML from JSON Resume
+FROM node:22-slim AS builder
 
-ENV JEKYLL_ENV=production
+# Install Chromium dependencies for Puppeteer PDF generation
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    chromium \
+    fonts-liberation \
+    fonts-noto-color-emoji \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install build tools and libraries required by common Jekyll plugins
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
-	   build-essential git zlib1g-dev libffi-dev libyaml-dev \
-	&& rm -rf /var/lib/apt/lists/*
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
-# Set workdir
 WORKDIR /app
 
-# Install gems with caching
-COPY Gemfile* ./
-RUN gem install bundler \
-	&& bundle config set without 'development test' \
-	&& bundle install --jobs 4 --retry 3
+# Install dependencies
+COPY package*.json ./
+RUN npm ci --include=dev
 
-# Copy site content and build
+# Copy source files and build
 COPY . .
-RUN bundle exec jekyll build --destination _site
+RUN npm run build && npm run pdf
+
+# Place built artifacts in _site/
+RUN mkdir -p _site && \
+    cp index.html _site/index.html && \
+    cp resume.json _site/resume.json && \
+    cp resume.pdf _site/resume.pdf
 
 # Nginx stage
 FROM nginx:alpine
