@@ -1,4 +1,4 @@
-name: Build and Push Multi-Architecture Docker Image
+name: Build & Deploy
 
 on:
   push:
@@ -10,8 +10,12 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
+permissions:
+  contents: read
+
 jobs:
-  build-and-push:
+  # ── Docker image → GHCR ──────────────────────────
+  docker:
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -56,3 +60,45 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+
+  # ── GitHub Pages ─────────────────────────────────
+  pages:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: npm
+
+    - name: Install dependencies
+      run: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm ci --include=dev
+
+    - name: Build HTML
+      run: npm run build
+
+    - name: Prepare Pages artifact
+      run: |
+        mkdir -p _site
+        cp index.html _site/index.html
+        cp resume.json _site/resume.json
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-action@v3
+      with:
+        path: _site
+
+    - name: Deploy to GitHub Pages
+      id: deploy
+      uses: actions/deploy-pages@v4
