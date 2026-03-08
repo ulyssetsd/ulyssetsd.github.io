@@ -82,11 +82,8 @@ jobs:
         node-version: 22
         cache: npm
 
-    - name: Install Chromium for PDF generation
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends chromium-browser
-        echo "PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser)" >> $GITHUB_ENV
+    - name: Configure Puppeteer to use runner's Chrome
+      run: echo "PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable)" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
