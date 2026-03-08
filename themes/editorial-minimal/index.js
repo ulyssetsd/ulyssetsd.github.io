@@ -60,7 +60,7 @@ exports.render = function (resume) {
   const skillsHtml = (resume.skills || []).map(skill => `
     <div class="skill-row">
       <span class="skill-name">${esc(skill.name)}</span>
-      <span class="skill-keywords">${(skill.keywords || []).join(' · ')}</span>
+      <span class="skill-keywords">${(skill.keywords || []).map(esc).join(' · ')}</span>
     </div>`).join('');
 
   const langHtml = (resume.languages || []).map(lang => `
@@ -89,7 +89,7 @@ exports.render = function (resume) {
       <div class="project-header">
         <div>
           <span class="project-name">${esc(proj.name)}</span>
-          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" target="_blank"> ↗</a>` : ''}
+          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" target="_blank" rel="noopener noreferrer"> ↗</a>` : ''}
         </div>
         <span class="project-dates">${formatDate(proj.startDate)} – ${formatDate(proj.endDate)}</span>
       </div>
@@ -203,11 +203,6 @@ exports.render = function (resume) {
     .job-location {
       font-size: 9pt;
       color: var(--muted);
-    }
-
-    .job-company {
-      font-size: 9.5pt;
-      font-style: italic;
     }
 
     .job-sep { color: var(--muted); }
@@ -434,8 +429,8 @@ exports.render = function (resume) {
     <div class="header-links">
       ${b.email ? `<a href="mailto:${esc(b.email)}">${esc(b.email)}</a>` : ''}
       ${b.phone ? `<span>·</span><a href="tel:${esc(b.phone.replace(/\s/g, ''))}">${esc(b.phone)}</a>` : ''}
-      ${github ? `<span>·</span><a href="${esc(github.url)}" target="_blank">github.com/${esc(github.username)}</a>` : ''}
-      ${linkedin ? `<span>·</span><a href="${esc(linkedin.url)}" target="_blank">linkedin.com/in/${esc(linkedin.username)}</a>` : ''}
+      ${github ? `<span>·</span><a href="${esc(github.url)}" target="_blank" rel="noopener noreferrer">github.com/${esc(github.username)}</a>` : ''}
+      ${linkedin ? `<span>·</span><a href="${esc(linkedin.url)}" target="_blank" rel="noopener noreferrer">linkedin.com/in/${esc(linkedin.username)}</a>` : ''}
       <span class="dl-pdf">·</span><a class="dl-pdf" href="/resume.pdf" download>Download PDF</a>
     </div>
     ${b.summary ? `<p class="summary">${esc(b.summary)}</p>` : ''}

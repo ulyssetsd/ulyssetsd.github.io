@@ -81,7 +81,7 @@
       "summary": "Developed web and mobile applications using C# and Java technologies.",
       "highlights": [
         "Developed applications using C# (.NET Core, Xamarin), Angular, Java (Spring, Hibernate) and MySQL",
-        "Used Github, Jira and Azure DevOps CI/CD tools for version control, issue tracking and continuous integration/delivery"
+        "Used GitHub, Jira and Azure DevOps CI/CD tools for version control, issue tracking and continuous integration/delivery"
       ],
       "url": "",
       "location": "Dublin, Ireland"
@@ -226,7 +226,7 @@
     {
       "name": "Architectural Patterns",
       "level": "Advanced",
-      "keywords": ["Microservices", "MVVM", "Domain-Driven Design", "TDD", "Clean Code", "Craftmanship"]
+      "keywords": ["Microservices", "MVVM", "Domain-Driven Design", "TDD", "Clean Code", "Craftsmanship"]
     },
     {
       "name": "Agile & Leadership",
@@ -329,15 +329,15 @@
   "references": [
     {
       "name": "Soufyane LOUCIF",
-      "reference": "Manager @ Bouygues Telecom : soulouci@bouyguestelecom.fr"
+      "reference": "Manager @ Bouygues Telecom (contact details available on request)"
     },
     {
       "name": "Pedro CABRAL",
-      "reference": "Manager @ TEKenable Ltd : pedro.cabral@tekenable.com"
+      "reference": "Manager @ TEKenable Ltd (contact details available on request)"
     },
     {
       "name": "Seamus BRADY",
-      "reference": "Service Delivery Manager @ TEKenable : seamus.brady@tekenable.com"
+      "reference": "Service Delivery Manager @ TEKenable (contact details available on request)"
     }
   ]
 }
