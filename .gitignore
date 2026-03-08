@@ -1,11 +1,9 @@
-# Jekyll build artifacts
+# Build artifacts
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Gem files
-Gemfile.lock
+index.html
+index-*.html
+resume.pdf
+resume-*.pdf
 
 # Docker build artifacts
 .docker/
@@ -23,7 +21,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
-.vscode/
 .idea/
 
 # Logs
@@ -32,3 +29,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Node
+node_modules/

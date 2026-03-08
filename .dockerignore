@@ -8,13 +8,9 @@ Dockerfile*
 
 # Build artifacts
 _site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
 
 # Dependencies
 node_modules/
-vendor/
 
 # IDE
 .vscode/

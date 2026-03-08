@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-editorial-minimal",
+  "version": "1.0.0",
+  "description": "Editorial Minimal - Pure typography, web + print balanced resume theme",
+  "main": "index.js",
+  "license": "MIT"
+}

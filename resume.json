@@ -1,0 +1,343 @@
+{
+  "basics": {
+    "name": "Ulysse Tassidis",
+    "label": "French Senior/Lead Software Engineer | Backend & Microservices Specialist (.NET/C#)",
+    "image": "",
+    "email": "utassidis@gmail.com",
+    "phone": "+33 6 63 23 46 62",
+    "url": "",
+    "summary": "Software Engineer working in Paris with expertise in full-stack development using C#, .NET, and Angular. Strong background in leading development teams, building scalable microservices, and delivering high-quality software solutions.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Paris",
+      "countryCode": "FR",
+      "region": "France"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ulyssetsd",
+        "url": "https://github.com/ulyssetsd/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "ulyssetassidis",
+        "url": "https://linkedin.com/in/ulyssetassidis/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "WEDA (VIDAL Group)",
+      "position": "Lead Dev C# / Angular",
+      "startDate": "2025-05",
+      "endDate": "",
+      "summary": "Led the Medical team (4-5 developers) on secure healthcare messaging (MSSanté v2) within Weda's EHR used by ~15,000 physicians. Joined during production instability and restored structure, delivery capacity, and reliability.",
+      "highlights": [
+        "Crisis stabilization: Took over post-critical release with 40k+ Sentry errors, led root-cause analysis, hotfix strategy, and progressive quality improvements",
+        "Migration & delivery: Piloted MSSanté v1→v2 migration (API LPS, data migration, SQL linked-server removal) and delivered secretary delegation feature across incremental releases",
+        "Technical evolution: Contributed to gradual modernization from legacy .NET Framework to .NET 8 APIs while maintaining backward compatibility and system stability",
+        "Team & process: Established engineering standards (poker planning, INVEST stories, 2-reviewer PR policy, pre-grooming with POs) and provided technical mentorship through regular 1-to-1s and pair programming. Led recruitment process for new developers (job description, technical interviews)",
+        "Release ownership: Managed production releases, coordinated with Ops/DBA, monitored via Sentry/Graylog/Dynatrace",
+        "Strategic contribution: Led Ségur v2 macro-estimation (465 MD) and CDA compliance work with domain experts",
+        "Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Redis, Sentry, Graylog, Dynatrace, Grafana/Prometheus"
+      ],
+      "url": "",
+      "location": "Issy-les-Moulineaux, France"
+    },
+    {
+      "name": "Bouygues Telecom",
+      "position": "Lead Dev C# / Angular",
+      "startDate": "2022-11",
+      "endDate": "2025-04",
+      "summary": "Led a team of five developers to build full-stack applications within a microservices architecture, focusing on network performance and large-scale data challenges. Aggregated data from France's 2G, 3G, 4G, and 5G networks to calculate KPIs and provide visualizations and alerting tools.",
+      "highlights": [
+        "Applied software craftsmanship principles (clean code, TDD) to ensure high-quality delivery",
+        "Collaborated with product owners and stakeholders to define requirements and deliver features",
+        "Technologies: .NET 6/8, Dapper, SQL Server, Angular 15, GitLab, Kubernetes, Grafana (Loki)"
+      ],
+      "url": "",
+      "location": "Paris, France"
+    },
+    {
+      "name": "TEKenable Ltd (formerly Greenfinch Technology)",
+      "position": "Lead Dev Mobile C#",
+      "startDate": "2020-04",
+      "endDate": "2022-06",
+      "summary": "Led mobile app development projects using Xamarin.Forms for iOS, Android and Windows platforms.",
+      "highlights": [
+        "Managed App Store / Azure Cloud deployments, Azure DevOps (CI/CD), code reviews and onboarding processes",
+        "Participated in solution design and business analysis with clients/end users to define use cases, architecture, deployment strategy, and estimations"
+      ],
+      "url": "",
+      "location": "Dublin, Ireland; Paris, France (from October 2020)"
+    },
+    {
+      "name": "Greenfinch Technology",
+      "position": "JAVA/C# Software Developer",
+      "startDate": "2019-07",
+      "endDate": "2020-03",
+      "summary": "Developed web and mobile applications using C# and Java technologies.",
+      "highlights": [
+        "Developed applications using C# (.NET Core, Xamarin), Angular, Java (Spring, Hibernate) and MySQL",
+        "Used Github, Jira and Azure DevOps CI/CD tools for version control, issue tracking and continuous integration/delivery"
+      ],
+      "url": "",
+      "location": "Dublin, Ireland"
+    },
+    {
+      "name": "IMEC Technologies",
+      "position": "C# Software Developer",
+      "startDate": "2019-03",
+      "endDate": "2019-07",
+      "summary": "Built cross-platform mobile applications and web applications.",
+      "highlights": [
+        "Built cross-platform mobile applications using Xamarin and web applications using ASP.NET",
+        "Set up CI/CD pipelines in Azure DevOps and used MVVM patterns to unit test UI components"
+      ],
+      "url": "",
+      "location": "Dublin, Ireland"
+    },
+    {
+      "name": "Lyli Association",
+      "position": "English Teacher (Volunteer)",
+      "startDate": "2018-09",
+      "endDate": "2018-10",
+      "summary": "Taught English and fundraising in a school built by the association.",
+      "highlights": [
+        "Taught English to children from 8 to 16 years old",
+        "Raised funds for the school and students"
+      ],
+      "url": "",
+      "location": "Siem Reap, Cambodia"
+    },
+    {
+      "name": "BNP Paribas",
+      "position": "JAVA Developer → Business Analyst → Project Manager (Apprenticeship)",
+      "startDate": "2015-10",
+      "endDate": "2018-08",
+      "summary": "3-year dual apprenticeship within BNP Paribas, progressing through three roles across IT development, business analysis, and project management.",
+      "highlights": [
+        "FIRST YEAR — JAVA Full Stack Developer: Built web applications using Spring MVC, Hibernate, Thymeleaf. Applied Agile Scrum with CI tools (GIT, Jenkins, Maven, Nexus). User story evaluation, use case design, test automation, bug fixing and maintenance",
+        "SECOND YEAR — Business Analyst, Operational Risks IS Redesign: Created, updated, and challenged the backlog, user stories, and MVP. Planned and facilitated users' workshops. Defined business processes and mockups",
+        "THIRD YEAR — Project Manager Assistant: Steering, monitoring, and coordination of a web application project. Estimated budget, risks, and planning"
+      ],
+      "url": "",
+      "location": "Paris, France"
+    },
+    {
+      "name": "Multimedia Automatique Diffusion",
+      "position": "PHP/MySQL Developer Intern",
+      "startDate": "2015-06",
+      "endDate": "2015-08",
+      "summary": "Participated in analysis, specification writing, and application development.",
+      "highlights": [
+        "Participated in analysis and drafting of needs",
+        "Wrote technical specification details",
+        "Designed and developed applications using Symfony Framework"
+      ],
+      "url": "",
+      "location": "Paris, France"
+    },
+    {
+      "name": "Temps Jeunes Association",
+      "position": "Child Support",
+      "startDate": "2014-07",
+      "endDate": "2014-08",
+      "summary": "Organized departure and return of children from vacations.",
+      "highlights": [
+        "Organized departure and return of children from vacations"
+      ],
+      "url": "",
+      "location": "Paris, France"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "ESIEE PARIS",
+      "studyType": "Engineer's Degree",
+      "area": "Computer Science and Application",
+      "startDate": "2015",
+      "endDate": "2018",
+      "score": "",
+      "courses": [],
+      "summary": "3 years in a Dual apprenticeship system. Specialization in 3D Engineering with a lot of C# development with .Net and Unity framework."
+    },
+    {
+      "institution": "Beijing Jiaotong University (BJTU)",
+      "studyType": "Master Program Exchange",
+      "area": "Software Engineering",
+      "startDate": "2017",
+      "endDate": "2018",
+      "score": "",
+      "courses": [],
+      "location": "Beijing, China",
+      "summary": "A student exchange where I studied Chinese Mandarin and software engineering."
+    },
+    {
+      "institution": "University Institute of Technology MLV",
+      "studyType": "Technical Degree",
+      "area": "Computer Science",
+      "startDate": "2013",
+      "endDate": "2015",
+      "score": "",
+      "courses": [],
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "C#",
+      "level": "Expert",
+      "keywords": [".NET Core", ".NET 6", ".NET 8", ".NET 10", "Xamarin", "Unity", "ASP.NET"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": ["Angular", "React", "Node.js", "TypeScript"]
+    },
+    {
+      "name": "Java",
+      "level": "Advanced",
+      "keywords": ["Spring Boot", "Spring MVC", "Hibernate", "Android"]
+    },
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "keywords": ["Flask"]
+    },
+    {
+      "name": "SQL",
+      "level": "Advanced",
+      "keywords": ["SQL Server", "PostgreSQL", "MySQL", "MongoDB"]
+    },
+    {
+      "name": "DevOps & Tools",
+      "level": "Advanced",
+      "keywords": ["Docker", "Kubernetes", "Azure DevOps", "GitLab", "GitHub", "Azure Cloud", "CI/CD"]
+    },
+    {
+      "name": "Observability",
+      "level": "Advanced",
+      "keywords": ["Sentry", "Graylog", "Dynatrace", "Grafana", "Prometheus", "Loki"]
+    },
+    {
+      "name": "Architectural Patterns",
+      "level": "Advanced",
+      "keywords": ["Microservices", "MVVM", "Domain-Driven Design", "TDD", "Clean Code", "Craftmanship"]
+    },
+    {
+      "name": "Agile & Leadership",
+      "level": "Advanced",
+      "keywords": ["Scrum", "Team Leadership", "Code Reviews", "Pair Programming", "Mentoring"]
+    },
+    {
+      "name": "AI Agents",
+      "level": "Advanced",
+      "keywords": ["GitHub Copilot", "Claude", "Gemini"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Highly proficient (C1)",
+      "summary": "Certification TOEIC® with a score of 905. Lived and worked in Ireland for 2 years."
+    },
+    {
+      "language": "Chinese Mandarin",
+      "fluency": "Basic"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "summary": "Musician from 2014 to 2018. Managed music band and organized performances for 4 years. Released two albums with more than thirty lives across France and England."
+    },
+    {
+      "name": "Running & Climbing"
+    },
+    {
+      "name": "Travel & Asian Culture",
+      "summary": "Passionate about Asian culture and travel. Traveled and organized trips across 8 Asian countries."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Twitter like in Python / Flask framework",
+      "startDate": "2017-09",
+      "endDate": "2018-01",
+      "summary": "A Twitter-like website made with Flask (python framework), PostgreSQL, and Bootstrap. Organized with AGILE method and GIT. Made during year at BJTU with highest note.",
+      "highlights": [
+        "Flask framework for backend",
+        "PostgreSQL database",
+        "Bootstrap for frontend styling",
+        "AGILE methodology and GIT version control"
+      ],
+      "keywords": ["Python", "Flask", "PostgreSQL", "Bootstrap", "AGILE"],
+      "url": "https://github.com/ulyssetsd/bjtu-sql",
+      "type": "application"
+    },
+    {
+      "name": "Microsoft HoloLens Project / Unity C#",
+      "startDate": "2016-09",
+      "endDate": "2017-06",
+      "summary": "Augmented Reality gaming project conducted within ESIEE Paris for Artefact Event. Combines QR code detection, voice recognition, environmental control (room scan), and Unity.",
+      "highlights": [
+        "QR code detection",
+        "Voice recognition",
+        "Environmental control and room scanning",
+        "Continuous HoloLens SDK updates adaptation"
+      ],
+      "keywords": ["Unity", "C#", "Augmented Reality", "HoloLens", "Git"],
+      "url": "https://drive.google.com/file/d/0B71u3HxNPBdSWXNqNEI5MHBCVEk/",
+      "type": "application"
+    },
+    {
+      "name": "Website - Empty House",
+      "startDate": "2016-02",
+      "endDate": "2016-03",
+      "summary": "Full-stack website project from conception to deployment, including design and development.",
+      "highlights": [
+        "HTML5 / CSS3 and JQUERY",
+        "CSS framework Materialized",
+        "Website deployment and maintenance"
+      ],
+      "keywords": ["HTML5", "CSS3", "jQuery", "Materialized"],
+      "type": "application"
+    },
+    {
+      "name": "Android Wi-Fi Mapping Application",
+      "startDate": "2014-11",
+      "endDate": "2015-05",
+      "summary": "Research project to model and map Wi-Fi signals received with Android smartphones to identify white areas in coverage.",
+      "highlights": [
+        "Android application development",
+        "Signal strength mapping and modeling",
+        "Algorithm research and optimization",
+        "Performance improvements"
+      ],
+      "keywords": ["Android", "Java", "Signal Processing"],
+      "type": "application"
+    }
+  ],
+  "references": [
+    {
+      "name": "Soufyane LOUCIF",
+      "reference": "Manager @ Bouygues Telecom : soulouci@bouyguestelecom.fr"
+    },
+    {
+      "name": "Pedro CABRAL",
+      "reference": "Manager @ TEKenable Ltd : pedro.cabral@tekenable.com"
+    },
+    {
+      "name": "Seamus BRADY",
+      "reference": "Service Delivery Manager @ TEKenable : seamus.brady@tekenable.com"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "preview": "resume serve --theme ./themes/editorial-minimal",
+    "build": "resume export index.html --theme ./themes/editorial-minimal",
+    "pdf": "resume export resume.pdf --theme ./themes/editorial-minimal"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "puppeteer": "^24.38.0"
+  }
+}
