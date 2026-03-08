@@ -95,7 +95,7 @@ jobs:
         cp resume.json _site/resume.json
 
     - name: Upload Pages artifact
-      uses: actions/upload-pages-action@v3
+      uses: actions/upload-pages-artifact@v3
       with:
         path: _site
 
