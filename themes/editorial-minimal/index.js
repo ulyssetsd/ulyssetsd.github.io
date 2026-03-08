@@ -19,6 +19,10 @@ function esc(str) {
     .replace(/"/g, '&quot;');
 }
 
+exports.pdfRenderOptions = {
+  mediaType: 'print',
+};
+
 exports.render = function (resume) {
   const b = resume.basics || {};
   const github = (b.profiles || []).find(p => p.network === 'GitHub');
