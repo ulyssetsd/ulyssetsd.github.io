@@ -17,12 +17,10 @@ spec:
     metadata:
       labels:
         app: ulyssetsd-github-io
-      annotations:
-        deployment.kubernetes.io/restart: "2026-03-07T19:30:06Z"
     spec:
       containers:
       - name: website
-        image: ghcr.io/ulyssetsd/ulyssetsd.github.io:latest
+        image: ghcr.io/ulyssetsd/ulyssetsd.github.io:latest # {"$imagepolicy": "flux-system:ulyssetsd-github-io"}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
