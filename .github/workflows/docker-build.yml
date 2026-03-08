@@ -14,8 +14,41 @@ permissions:
   contents: read
 
 jobs:
+  # ── Build HTML + PDF ─────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: npm
+
+    - name: Configure Puppeteer to use runner's Chrome
+      run: echo "PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable)" >> $GITHUB_ENV
+
+    - name: Install dependencies
+      run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
+
+    - name: Build HTML and PDF
+      run: npm run build && npm run pdf
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: site
+        path: |
+          index.html
+          resume.json
+          resume.pdf
+
   # ── Docker image → GHCR ──────────────────────────
   docker:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -23,6 +56,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: site
 
     - name: Log in to Container Registry
       uses: docker/login-action@v3
@@ -47,8 +85,6 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-      with:
-        buildkitd-flags: --debug
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
@@ -63,6 +99,7 @@ jobs:
 
   # ── GitHub Pages ─────────────────────────────────
   pages:
+    needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
@@ -73,25 +110,12 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
       with:
-        node-version: 22
-        cache: npm
+        name: site
 
-    - name: Configure Puppeteer to use runner's Chrome
-      run: echo "PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable)" >> $GITHUB_ENV
-
-    - name: Install dependencies
-      run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
-
-    - name: Build HTML and PDF
-      run: npm run build && npm run pdf
-
-    - name: Prepare Pages artifact
+    - name: Prepare Pages directory
       run: |
         mkdir -p _site
         cp index.html _site/index.html

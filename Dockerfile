@@ -1,20 +1,7 @@
-# Builder stage: Node.js to generate static HTML from JSON Resume
-FROM node:22-slim AS builder
+# Builder stage: generate static HTML from JSON Resume
+FROM node:22-alpine AS builder
 
-# Install Chromium dependencies for Puppeteer PDF generation
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    chromium \
-    fonts-liberation \
-    fonts-noto-color-emoji \
-    && rm -rf /var/lib/apt/lists/*
-
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_SKIP_DOWNLOAD=true
-
-# Wrapper to launch Chromium with --no-sandbox (required when running as root in Docker)
-RUN printf '#!/bin/sh\nexec /usr/bin/chromium --no-sandbox "$@"\n' > /usr/local/bin/chromium-wrapper && \
-    chmod +x /usr/local/bin/chromium-wrapper
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/local/bin/chromium-wrapper
 
 WORKDIR /app
 
@@ -22,18 +9,19 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --include=dev
 
-# Copy source files and build
+# Copy source files and build HTML only (PDF is generated in CI)
 COPY . .
-RUN npm run build && npm run pdf && test -f resume.pdf
+RUN npm run build
 
 # Place built artifacts in _site/
 RUN mkdir -p _site && \
     cp index.html _site/index.html && \
-    cp resume.json _site/resume.json && \
-    cp resume.pdf _site/resume.pdf
+    cp resume.json _site/resume.json
+# PDF is added by CI via COPY --from=context or build-arg
+COPY resume.pdf* _site/
 
 # Nginx stage
-FROM nginx:alpine
+FROM nginx:alpine-slim
 
 # Remove default files
 RUN rm -rf /usr/share/nginx/html/*
