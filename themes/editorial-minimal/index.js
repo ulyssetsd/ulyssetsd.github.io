@@ -390,6 +390,57 @@ exports.render = function (resume) {
       line-height: 1.4;
     }
 
+    /* ── SCREEN ─────────────────────────────── */
+    @media screen {
+      body {
+        font-size: 15px;
+        max-width: 860px;
+        padding: 48px 32px 64px;
+        line-height: 1.6;
+      }
+
+      .header { margin-bottom: 28px; }
+      .header h1 { font-size: 36px; margin-bottom: 6px; }
+      .header .label { font-size: 15px; margin-bottom: 12px; }
+      .header-links { font-size: 14px; margin-bottom: 16px; }
+      .header .summary { font-size: 14px; padding-left: 16px; }
+
+      .section { margin-bottom: 28px; }
+      .section-title { font-size: 11px; margin-bottom: 14px; padding-bottom: 5px; }
+
+      .job { margin-bottom: 22px; }
+      .job-position { font-size: 15px; }
+      .job-company { font-size: 15px; }
+      .job-location { font-size: 14px; }
+      .job-dates { font-size: 13px; }
+      .job-summary { font-size: 14px; margin: 4px 0 8px; }
+      .job-highlights { font-size: 14px; padding-left: 22px; }
+      .job-highlights li { margin-bottom: 4px; }
+
+      .edu-item { margin-bottom: 16px; }
+      .edu-degree { font-size: 15px; }
+      .edu-dates { font-size: 13px; }
+      .edu-summary { font-size: 14px; }
+
+      .skill-row { font-size: 14px; margin-bottom: 6px; gap: 16px; }
+      .skill-name { min-width: 180px; }
+
+      .lang-row { font-size: 14px; margin-bottom: 6px; gap: 16px; }
+      .lang-name { min-width: 160px; }
+      .lang-detail { font-size: 13px; }
+
+      .interest-name { font-size: 14px; }
+      .interest-summary { font-size: 13px; }
+
+      .ref-item { font-size: 14px; margin-bottom: 6px; gap: 16px; }
+      .ref-name { min-width: 180px; }
+
+      .project-item { margin-bottom: 14px; }
+      .project-name { font-size: 15px; }
+      .project-dates { font-size: 13px; }
+      .project-summary { font-size: 14px; }
+    }
+
     /* ── PRINT ─────────────────────────────── */
     @page {
       margin: 1cm 1cm 1.8cm 1cm;
