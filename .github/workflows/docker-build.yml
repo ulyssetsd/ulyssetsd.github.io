@@ -79,7 +79,6 @@ jobs:
         tags: |
           type=ref,event=branch
           type=ref,event=pr
-          type=raw,value=main-{{date '20060102150405'}}-{{sha}},enable={{is_default_branch}}
           type=raw,value=latest,enable={{is_default_branch}}
 
     - name: Set up Docker Buildx

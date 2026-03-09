@@ -1,0 +1,24 @@
+name: Cleanup GHCR old versions
+
+on:
+  workflow_run:
+    workflows: ["Build & Deploy"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  packages: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+    - name: Delete all container versions except the latest
+      uses: actions/delete-package-versions@v5
+      with:
+        package-name: ${{ github.event.repository.name }}
+        package-type: container
+        min-versions-to-keep: 1
+        token: ${{ secrets.GITHUB_TOKEN }}
