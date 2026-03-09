@@ -125,7 +125,7 @@ exports.render = function (resume) {
       line-height: 1.5;
       max-width: 680px;
       margin: 0 auto;
-      padding: 40px 20px 40px;
+      padding: 48px;
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -399,7 +399,7 @@ exports.render = function (resume) {
       body {
         font-size: 15px;
         max-width: 860px;
-        padding: 48px 32px 64px;
+        padding: 48px;
         line-height: 1.6;
       }
 
@@ -447,11 +447,7 @@ exports.render = function (resume) {
 
     /* ── PRINT ─────────────────────────────── */
     @page {
-      margin: 1cm 1cm 1.8cm 1cm;
-    }
-
-    @page :first {
-      margin-top: 0.5cm;
+      margin: 2cm;
     }
 
     @media print {
