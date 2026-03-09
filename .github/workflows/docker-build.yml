@@ -35,7 +35,7 @@ jobs:
       run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
 
     - name: Build HTML and PDF
-      run: npm run build && npm run pdf
+      run: mkdir -p public && npm run build && npm run pdf
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
