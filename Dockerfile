@@ -15,10 +15,9 @@ RUN npm run build
 
 # Place built artifacts in _site/
 RUN mkdir -p _site && \
-    cp index.html _site/index.html && \
-    cp resume.json _site/resume.json
+    cp public/index.html _site/index.html
 # PDF is added by CI via COPY --from=context or build-arg
-COPY resume.pdf* _site/
+COPY public/resume.pdf* _site/
 
 # Nginx stage
 FROM nginx:alpine-slim

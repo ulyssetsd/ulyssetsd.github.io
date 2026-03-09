@@ -486,7 +486,7 @@ exports.render = function (resume) {
       ${b.phone ? `<span>·</span><a href="tel:${esc(b.phone.replace(/\s/g, ''))}">${esc(b.phone)}</a>` : ''}
       ${github ? `<span>·</span><a href="${esc(github.url)}" target="_blank" rel="noopener noreferrer">github.com/${esc(github.username)}</a>` : ''}
       ${linkedin ? `<span>·</span><a href="${esc(linkedin.url)}" target="_blank" rel="noopener noreferrer">linkedin.com/in/${esc(linkedin.username)}</a>` : ''}
-      <span class="dl-pdf">·</span><a class="dl-pdf" href="/resume.pdf" download>Download PDF</a>
+      <span class="dl-pdf">·</span><a class="dl-pdf" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
     </div>
     ${b.summary ? `<p class="summary">${esc(b.summary)}</p>` : ''}
   </div>

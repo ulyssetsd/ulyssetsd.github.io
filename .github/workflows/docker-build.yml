@@ -42,9 +42,8 @@ jobs:
       with:
         name: site
         path: |
-          index.html
-          resume.json
-          resume.pdf
+          public/index.html
+          public/resume.pdf
 
   # ── Docker image → GHCR ──────────────────────────
   docker:
@@ -118,9 +117,8 @@ jobs:
     - name: Prepare Pages directory
       run: |
         mkdir -p _site
-        cp index.html _site/index.html
-        cp resume.json _site/resume.json
-        cp resume.pdf _site/resume.pdf
+        cp public/index.html _site/index.html
+        cp public/resume.pdf _site/resume.pdf
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3

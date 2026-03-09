@@ -1,8 +1,8 @@
 {
   "scripts": {
     "preview": "resume serve --theme ./themes/editorial-minimal",
-    "build": "resume export index.html --theme ./themes/editorial-minimal",
-    "pdf": "resume export resume.pdf --theme ./themes/editorial-minimal"
+    "build": "resume export public/index.html --theme ./themes/editorial-minimal",
+    "pdf": "resume export public/resume.pdf --theme ./themes/editorial-minimal"
   },
   "devDependencies": {
     "puppeteer": "^24.38.0",
