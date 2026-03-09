@@ -1,9 +1,5 @@
-# Build artifacts
-_site/
-index.html
-index-*.html
-resume.pdf
-resume-*.pdf
+# Build output
+public/
 
 # Docker build artifacts
 .docker/

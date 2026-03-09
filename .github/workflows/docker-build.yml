@@ -34,16 +34,14 @@ jobs:
     - name: Install dependencies
       run: PUPPETEER_SKIP_DOWNLOAD=true npm ci --include=dev
 
-    - name: Build HTML and PDF
-      run: mkdir -p public && npm run build && npm run pdf
+    - name: Build site
+      run: mkdir -p public && npm run build
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: site
-        path: |
-          public/index.html
-          public/resume.pdf
+        path: public/
 
   # ── Docker image → GHCR ──────────────────────────
   docker:
@@ -113,16 +111,10 @@ jobs:
       with:
         name: site
 
-    - name: Prepare Pages directory
-      run: |
-        mkdir -p _site
-        cp public/index.html _site/index.html
-        cp public/resume.pdf _site/resume.pdf
-
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: _site
+        path: public
 
     - name: Deploy to GitHub Pages
       id: deploy
