@@ -1,9 +1,26 @@
 {
   "scripts": {
     "start": "resume serve --theme ./themes/editorial-minimal",
+    "start:editorial": "resume serve --theme ./themes/editorial-minimal",
+    "start:terminal": "resume serve --theme ./themes/terminal",
+    "start:infographic": "resume serve --theme ./themes/infographic",
+    "start:glassmorphism": "resume serve --theme ./themes/glassmorphism",
+    "start:press": "resume serve --theme ./themes/press",
     "build": "npm run build:html && npm run build:pdf",
     "build:html": "resume export public/index.html --theme ./themes/editorial-minimal",
-    "build:pdf": "resume export public/resume.pdf --theme ./themes/editorial-minimal"
+    "build:pdf": "resume export public/resume.pdf --theme ./themes/editorial-minimal",
+    "build:editorial": "resume export public/editorial-minimal/index.html --theme ./themes/editorial-minimal && resume export public/editorial-minimal/resume.pdf --theme ./themes/editorial-minimal",
+    "build:terminal": "resume export public/terminal/index.html --theme ./themes/terminal && resume export public/terminal/resume.pdf --theme ./themes/terminal",
+    "build:infographic": "resume export public/infographic/index.html --theme ./themes/infographic && resume export public/infographic/resume.pdf --theme ./themes/infographic",
+    "build:glassmorphism": "resume export public/glassmorphism/index.html --theme ./themes/glassmorphism && resume export public/glassmorphism/resume.pdf --theme ./themes/glassmorphism",
+    "build:press": "resume export public/press/index.html --theme ./themes/press && resume export public/press/resume.pdf --theme ./themes/press",
+    "start:compact": "resume serve --theme ./themes/compact",
+    "start:swiss": "resume serve --theme ./themes/swiss",
+    "start:warm": "resume serve --theme ./themes/warm",
+    "build:compact": "resume export public/compact/index.html --theme ./themes/compact && resume export public/compact/resume.pdf --theme ./themes/compact",
+    "build:swiss": "resume export public/swiss/index.html --theme ./themes/swiss && resume export public/swiss/resume.pdf --theme ./themes/swiss",
+    "build:warm": "resume export public/warm/index.html --theme ./themes/warm && resume export public/warm/resume.pdf --theme ./themes/warm",
+    "build:all": "npm run build && npm run build:editorial && npm run build:terminal && npm run build:infographic && npm run build:glassmorphism && npm run build:press && npm run build:compact && npm run build:swiss && npm run build:warm"
   },
   "devDependencies": {
     "puppeteer": "^24.38.0",

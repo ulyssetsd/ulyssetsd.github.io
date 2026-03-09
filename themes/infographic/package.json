@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-infographic",
+  "version": "1.0.0",
+  "description": "Infographic / Data-Viz - Colorful dashboard with sidebar, timeline, and skill bars",
+  "main": "index.js",
+  "license": "MIT"
+}

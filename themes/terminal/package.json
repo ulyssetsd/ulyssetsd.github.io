@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-terminal",
+  "version": "1.0.0",
+  "description": "Terminal / Dev - Dark hacker terminal aesthetic with monospace typography",
+  "main": "index.js",
+  "license": "MIT"
+}

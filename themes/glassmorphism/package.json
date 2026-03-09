@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-glassmorphism",
+  "version": "1.0.0",
+  "description": "Glassmorphism - Futuristic frosted glass cards on gradient background with animations",
+  "main": "index.js",
+  "license": "MIT"
+}

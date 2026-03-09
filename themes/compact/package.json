@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-compact",
+  "version": "1.0.0",
+  "description": "Compact - Ultra-dense monochrome layout designed to fit on a single A4 page",
+  "main": "index.js",
+  "license": "MIT"
+}

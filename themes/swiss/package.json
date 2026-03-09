@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-swiss",
+  "version": "1.0.0",
+  "description": "Swiss - International typographic style with strict grid, bold section headers, and red accent",
+  "main": "index.js",
+  "license": "MIT"
+}
