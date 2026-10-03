@@ -29,6 +29,20 @@
   },
   "work": [
     {
+      "name": "BlackRock",
+      "position": "Senior Software Engineer — SaaS Platform",
+      "url": "https://www.blackrock.com",
+      "startDate": "2026-09",
+      "endDate": "",
+      "summary": "Contributed to the evolution of a SaaS platform and its internal tools, with a focus on automation, reliability and developer experience.",
+      "highlights": [
+        "Built internal tools to support deployment, configuration and release activities.",
+        "Helped improve shared platform services and developer workflows."
+      ],
+      "keywords": ["SaaS", "DevOps", "Developer Experience"],
+      "location": "Paris, France"
+    },
+    {
       "name": "WEDA (VIDAL Group)",
       "position": "Lead Dev C# / Angular",
       "startDate": "2025-05",
