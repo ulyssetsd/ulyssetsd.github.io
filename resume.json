@@ -29,17 +29,19 @@
   },
   "work": [
     {
-      "name": "BlackRock",
-      "position": "Senior Software Engineer — SaaS Platform",
+      "name": "BlackRock Aladdin (eFront)",
+      "position": "Senior Software Engineer - Core Operational Software & SaaS Platform",
       "url": "https://www.blackrock.com",
       "startDate": "2026-09",
       "endDate": "",
-      "summary": "Contributed to the evolution of a SaaS platform and its internal tools, with a focus on automation, reliability and developer experience.",
+      "summary": "Core engineering for the Aladdin Private Markets (eFront) SaaS platform, focused on shared services, CI/CD and modernization of its technical foundation.",
       "highlights": [
-        "Built internal tools to support deployment, configuration and release activities.",
-        "Helped improve shared platform services and developer workflows."
+        "Build and maintain CI/CD and deployment tooling that automates customer-specific SaaS configuration; provide the QA team with technical support for release-test runs.",
+        "Develop and maintain shared Core modules across OpenID Connect/SSO, role-based access control (RBAC) and notifications, integrating SMTP, AWS SES and Azure services.",
+        "Modernize legacy .NET Framework 4.7 services toward .NET 10 while improving centralized application logs and traces.",
+        "Use GitHub Copilot and Devin in day-to-day engineering and share practical, domain-specific agent workflows and skills with nearby teams."
       ],
-      "keywords": ["SaaS", "DevOps", "Developer Experience"],
+      "keywords": [".NET Framework 4.7", ".NET 10", "C#", "CI/CD", "SaaS", "AWS", "Azure", "OpenID Connect", "RBAC", "GitHub Copilot", "Devin", "Observability"],
       "location": "Paris, France"
     },
     {
