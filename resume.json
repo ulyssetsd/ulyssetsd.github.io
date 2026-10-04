@@ -49,7 +49,7 @@
       "name": "WEDA (VIDAL Group)",
       "position": "Lead Dev C# / Angular",
       "startDate": "2025-05",
-      "endDate": "",
+      "endDate": "2026-06",
       "summary": "Led the Medical team (4-5 developers) on secure healthcare messaging (MSSanté v2) within Weda's EHR used by ~15,000 physicians. Joined during production instability and restored structure, delivery capacity, and reliability.",
       "highlights": [
         "Crisis stabilization: Took over post-critical release with 40k+ Sentry errors, led root-cause analysis, hotfix strategy, and progressive quality improvements",
