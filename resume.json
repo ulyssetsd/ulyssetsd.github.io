@@ -39,9 +39,10 @@
         "Build and maintain CI/CD and deployment tooling that automates customer-specific SaaS configuration; provide the QA team with technical support for release-test runs.",
         "Develop and maintain shared Core modules across OpenID Connect/SSO, role-based access control (RBAC) and notifications, integrating SMTP, AWS SES and Azure services.",
         "Modernize legacy .NET Framework 4.7 services toward .NET 10 while improving centralized application logs and traces.",
-        "Use GitHub Copilot and Devin in day-to-day engineering and share practical, domain-specific agent workflows and skills with nearby teams."
+        "Use GitHub Copilot and Devin in day-to-day engineering and share practical, domain-specific agent workflows and skills with nearby teams.",
+        "Technologies: C#, .NET Framework 4.7, .NET 10, PowerShell, Azure DevOps (CI/CD), AWS, Azure, OpenID Connect, OpenTelemetry, GitHub Copilot, Devin"
       ],
-      "keywords": [".NET Framework 4.7", ".NET 10", "C#", "CI/CD", "SaaS", "AWS", "Azure", "OpenID Connect", "RBAC", "GitHub Copilot", "Devin", "Observability"],
+      "keywords": ["C#", ".NET Framework 4.7", ".NET 10", "PowerShell", "Azure DevOps", "CI/CD", "SaaS", "AWS", "Azure", "OpenID Connect", "RBAC", "OpenTelemetry", "GitHub Copilot", "Devin"],
       "location": "Paris, France"
     },
     {
