@@ -206,49 +206,59 @@
   ],
   "skills": [
     {
-      "name": "C#",
+      "name": "C# / .NET",
       "level": "Expert",
-      "keywords": [".NET Core", ".NET 6", ".NET 8", ".NET 10", "Xamarin", "Unity", "ASP.NET"]
+      "keywords": [".NET Framework", ".NET Core", ".NET 6/8/10", "ASP.NET", "Xamarin", "Unity"]
     },
     {
-      "name": "JavaScript",
+      "name": "Web development",
       "level": "Advanced",
-      "keywords": ["Angular", "React", "Node.js", "TypeScript"]
+      "keywords": ["Angular", "TypeScript", "JavaScript"]
     },
     {
       "name": "Java",
-      "level": "Advanced",
-      "keywords": ["Spring Boot", "Spring MVC", "Hibernate", "Android"]
+      "level": "Intermediate",
+      "keywords": ["Spring MVC", "Hibernate", "Thymeleaf", "Android"]
     },
     {
-      "name": "SQL",
+      "name": "Data & SQL",
       "level": "Advanced",
-      "keywords": ["SQL Server", "PostgreSQL", "MySQL", "MongoDB"]
+      "keywords": ["SQL Server", "PostgreSQL", "MySQL", "Dapper"]
     },
     {
-      "name": "DevOps & Tools",
+      "name": "CI/CD & automation",
       "level": "Advanced",
-      "keywords": ["Docker", "Kubernetes", "Azure DevOps", "GitLab", "GitHub", "Azure Cloud", "CI/CD"]
+      "keywords": ["PowerShell", "Azure DevOps", "GitLab", "Jenkins", "GitHub", "CI/CD"]
+    },
+    {
+      "name": "Cloud & containers",
+      "level": "Advanced",
+      "keywords": ["AWS", "Azure", "Docker", "Kubernetes"]
+    },
+    {
+      "name": "Identity & integrations",
+      "level": "Advanced",
+      "keywords": ["OpenID Connect", "SSO", "RBAC", "SMTP", "AWS SES"]
     },
     {
       "name": "Observability",
       "level": "Advanced",
-      "keywords": ["Sentry", "Graylog", "Dynatrace", "Grafana", "Prometheus", "Loki"]
+      "keywords": ["OpenTelemetry", "Sentry", "Graylog", "Dynatrace", "Grafana", "Prometheus", "Loki"]
     },
     {
-      "name": "Architectural Patterns",
+      "name": "Architecture & quality",
       "level": "Advanced",
-      "keywords": ["Microservices", "MVVM", "Domain-Driven Design", "TDD", "Clean Code", "Craftsmanship"]
+      "keywords": ["Microservices", "MVVM", "TDD", "Clean Code"]
     },
     {
-      "name": "Agile & Leadership",
+      "name": "Agile & team leadership",
       "level": "Advanced",
-      "keywords": ["Scrum", "Team Leadership", "Code Reviews", "Pair Programming", "Mentoring"]
+      "keywords": ["Scrum", "Team Leadership", "Code Reviews", "Pair Programming", "Mentoring", "Recruitment"]
     },
     {
-      "name": "AI Agents",
+      "name": "AI-assisted development",
       "level": "Advanced",
-      "keywords": ["GitHub Copilot", "Claude", "Gemini"]
+      "keywords": ["GitHub Copilot", "Devin"]
     }
   ],
   "languages": [
