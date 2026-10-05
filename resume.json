@@ -221,11 +221,6 @@
       "keywords": ["Spring Boot", "Spring MVC", "Hibernate", "Android"]
     },
     {
-      "name": "Python",
-      "level": "Intermediate",
-      "keywords": ["Flask"]
-    },
-    {
       "name": "SQL",
       "level": "Advanced",
       "keywords": ["SQL Server", "PostgreSQL", "MySQL", "MongoDB"]
