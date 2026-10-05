@@ -216,11 +216,6 @@
       "keywords": ["Angular", "TypeScript", "JavaScript"]
     },
     {
-      "name": "Java",
-      "level": "Intermediate",
-      "keywords": ["Spring MVC", "Hibernate", "Thymeleaf", "Android"]
-    },
-    {
       "name": "Data & SQL",
       "level": "Advanced",
       "keywords": ["SQL Server", "PostgreSQL", "MySQL", "Dapper"]
@@ -228,27 +223,27 @@
     {
       "name": "CI/CD & automation",
       "level": "Advanced",
-      "keywords": ["PowerShell", "Azure DevOps", "GitLab", "Jenkins", "GitHub", "CI/CD"]
+      "keywords": ["PowerShell", "Azure DevOps", "GitLab", "GitHub", "CI/CD"]
     },
     {
       "name": "Cloud & containers",
       "level": "Advanced",
-      "keywords": ["AWS", "Azure", "Docker", "Kubernetes"]
+      "keywords": ["Azure", "Docker", "Kubernetes"]
     },
     {
       "name": "Identity & integrations",
       "level": "Advanced",
-      "keywords": ["OpenID Connect", "SSO", "RBAC", "SMTP", "AWS SES"]
+      "keywords": ["OpenID Connect", "SSO", "RBAC", "SMTP"]
     },
     {
-      "name": "Observability",
+      "name": "API observability & monitoring",
       "level": "Advanced",
-      "keywords": ["OpenTelemetry", "Sentry", "Graylog", "Dynatrace", "Grafana", "Prometheus", "Loki"]
+      "keywords": ["Grafana", "Prometheus", "OpenTelemetry", "Loki", "Sentry", "Graylog", "Dynatrace"]
     },
     {
       "name": "Architecture & quality",
       "level": "Advanced",
-      "keywords": ["Microservices", "MVVM", "TDD", "Clean Code"]
+      "keywords": ["Microservices", "Domain-Driven Design", "Software Craftsmanship", "MVVM", "TDD", "Clean Code"]
     },
     {
       "name": "Agile & team leadership",
@@ -258,7 +253,7 @@
     {
       "name": "AI-assisted development",
       "level": "Advanced",
-      "keywords": ["GitHub Copilot", "Devin"]
+      "keywords": ["GitHub Copilot", "Devin", "Claude"]
     }
   ],
   "languages": [
