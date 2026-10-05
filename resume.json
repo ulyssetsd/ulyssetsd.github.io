@@ -6,7 +6,7 @@
     "email": "utassidis@gmail.com",
     "phone": "+33 6 63 23 46 62",
     "url": "",
-    "summary": "Software Engineer working in Paris with expertise in full-stack development using C#, .NET, and Angular. Strong background in leading development teams, building scalable microservices, and delivering high-quality software solutions.",
+    "summary": "Senior software engineer focused on C#/.NET backend systems, API integrations, and architecture modernization. Experienced in end-to-end technical ownership, solving complex integration constraints, and leading delivery across healthcare and SaaS.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -52,13 +52,13 @@
       "endDate": "2026-06",
       "summary": "Led the Medical team (4-5 developers) on secure healthcare messaging (MSSanté v2) within Weda's EHR used by ~15,000 physicians. Joined during production instability and restored structure, delivery capacity, and reliability.",
       "highlights": [
-        "Crisis stabilization: Took over post-critical release with 40k+ Sentry errors, led root-cause analysis, hotfix strategy, and progressive quality improvements",
-        "Migration & delivery: Piloted MSSanté v1→v2 migration (API LPS, data migration, SQL linked-server removal) and delivered secretary delegation feature across incremental releases",
-        "Technical evolution: Contributed to gradual modernization from legacy .NET Framework to .NET 8 APIs while maintaining backward compatibility and system stability",
-        "Team & process: Established engineering standards (poker planning, INVEST stories, 2-reviewer PR policy, pre-grooming with POs) and provided technical mentorship through regular 1-to-1s and pair programming. Led recruitment process for new developers (job description, technical interviews)",
-        "Release ownership: Managed production releases, coordinated with Ops/DBA, monitored via Sentry/Graylog/Dynatrace",
+        "Operational recovery: Took over after a critical release with 40k+ Sentry errors, led root-cause analysis and hotfixes, and managed production releases with Ops/DBA",
+        "Product delivery: Piloted MSSanté v1→v2 migration and delivered secretary delegation; contributed to the .NET Framework→.NET 8 transition and SQL linked-server removal",
+        "Annuaire Santé — Ségur V2: Owned the solution end to end, replacing direct ANS FHIR queries with a .NET sync pipeline that aggregates and denormalizes Practitioner, PractitionerRole, and Organization resources in MongoDB for an optimized internal REST API",
+        "Built with TDD; integration tests exposed search and volume limits in the ANS FHIR API. Reported them on ANS's official GitHub and implemented Redis, API-token security, rate limiting, circuit breakers, and Kubernetes manifests",
+        "Team & process: Led 4–5 developers; established poker planning, INVEST stories, two-reviewer PRs, and pre-grooming; mentored through 1-to-1s and pair programming, and led recruitment",
         "Strategic contribution: Led Ségur v2 macro-estimation (465 MD) and CDA compliance work with domain experts",
-        "Technologies: .NET Framework/.NET 8, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Redis, Sentry, Graylog, Dynatrace, Grafana/Prometheus"
+        "Technologies: .NET Framework/.NET 8, HL7 FHIR, FHIR REST APIs, MongoDB, Redis, Angular, SQL Server, Azure DevOps, Docker, Kubernetes, RabbitMQ, Sentry, Graylog, Dynatrace, Grafana/Prometheus"
       ],
       "url": "",
       "location": "Issy-les-Moulineaux, France"
@@ -216,9 +216,14 @@
       "keywords": ["Angular", "TypeScript", "JavaScript"]
     },
     {
-      "name": "Data & SQL",
+      "name": "Data & storage",
       "level": "Advanced",
-      "keywords": ["SQL Server", "PostgreSQL", "MySQL", "Dapper"]
+      "keywords": ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Dapper"]
+    },
+    {
+      "name": "Healthcare interoperability",
+      "level": "Advanced",
+      "keywords": ["HL7 FHIR", "FHIR REST APIs"]
     },
     {
       "name": "CI/CD & automation",
