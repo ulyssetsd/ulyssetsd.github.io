@@ -36,9 +36,10 @@
       "endDate": "",
       "summary": "Core engineering for the Aladdin Private Markets (eFront) SaaS platform, focused on shared services, CI/CD and modernization of its technical foundation.",
       "highlights": [
-        "Build and maintain CI/CD and deployment tooling that automates customer-specific SaaS configuration; provide the QA team with technical support for release-test runs.",
-        "Develop and maintain shared Core modules across OpenID Connect/SSO, role-based access control (RBAC) and notifications, integrating SMTP, AWS SES and Azure services.",
-        "Modernize legacy .NET Framework 4.7 services toward .NET 10 while improving centralized application logs and traces.",
+        "Build and maintain CI/CD pipelines and deployment tooling for customer-specific SaaS configurations; support unit, integration and end-to-end UI test runs.",
+        "Maintain shared Core modules for OpenID Connect/SSO, role-based access control (RBAC) and notifications, including integrations with AWS and Azure services.",
+        "Address security findings and harden shared Core services, including authentication, authorization and service integrations.",
+        "Modernize legacy .NET Framework 4.7 services toward .NET 10 to keep the platform maintainable.",
         "Use GitHub Copilot and Devin in day-to-day engineering and share practical, domain-specific agent workflows and skills with nearby teams.",
         "Technologies: C#, .NET Framework 4.7, .NET 10, PowerShell, Azure DevOps (CI/CD), AWS, Azure, OpenID Connect, OpenTelemetry, GitHub Copilot, Devin"
       ],
