@@ -19,8 +19,16 @@ function esc(str) {
     .replace(/"/g, '&quot;');
 }
 
+function renderTechnologies(keywords) {
+  if (!keywords || !keywords.length) return '';
+  return `<p class="technologies"><strong>Technologies:</strong> ${keywords.map(esc).join(' · ')}</p>`;
+}
+
 exports.pdfRenderOptions = {
   mediaType: 'print',
+  format: 'A4',
+  preferCSSPageSize: true,
+  printBackground: true,
 };
 
 exports.render = function (resume) {
@@ -35,8 +43,7 @@ exports.render = function (resume) {
       <div class="job">
         <div class="job-header">
           <div>
-            <span class="job-position">${esc(job.position)}</span>
-            <span class="job-sep"> · </span>
+            <h3 class="job-position">${esc(job.position)}</h3>
             <span class="job-company">${esc(job.name)}</span>
             ${job.location ? `<span class="job-sep"> · </span><span class="job-location">${esc(job.location)}</span>` : ''}
           </div>
@@ -44,6 +51,7 @@ exports.render = function (resume) {
         </div>
         ${job.summary ? `<p class="job-summary">${esc(job.summary)}</p>` : ''}
         ${highlights ? `<ul class="job-highlights">${highlights}</ul>` : ''}
+        ${renderTechnologies(job.keywords)}
       </div>`;
   }).join('');
 
@@ -93,11 +101,14 @@ exports.render = function (resume) {
       <div class="project-header">
         <div>
           <span class="project-name">${esc(proj.name)}</span>
-          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" target="_blank" rel="noopener noreferrer"> ↗</a>` : ''}
+          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" aria-label="View ${esc(proj.name)}" target="_blank" rel="noopener noreferrer">View project ↗</a>` : ''}
         </div>
-        <span class="project-dates">${formatDate(proj.startDate)} – ${formatDate(proj.endDate)}</span>
+        ${proj.startDate ? `<span class="project-dates">${formatDate(proj.startDate)} – ${formatDate(proj.endDate)}</span>` : ''}
       </div>
+      ${proj.description ? `<p class="project-description">${esc(proj.description)}</p>` : ''}
       ${proj.summary ? `<p class="project-summary">${esc(proj.summary)}</p>` : ''}
+      ${proj.highlights && proj.highlights.length ? `<ul class="project-highlights">${proj.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      ${renderTechnologies(proj.keywords)}
     </div>`).join('');
 
   return `<!DOCTYPE html>
@@ -105,7 +116,8 @@ exports.render = function (resume) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${esc(b.name)} — Resume</title>
+  <title>${esc(b.name)} — ${esc(b.label || 'Resume')}</title>
+  <meta name="description" content="${esc(b.summary)}">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -113,368 +125,138 @@ exports.render = function (resume) {
       --accent: #2563eb;
       --text: #111111;
       --text-2: #333333;
-      --muted: #888888;
+      --muted: #555555;
       --rule: #dddddd;
     }
 
     body {
       font-family: Arial, 'Liberation Sans', sans-serif;
-      font-size: 9.5pt;
+      font-size: 15px;
       color: var(--text);
       background: white;
       line-height: 1.5;
-      max-width: 680px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 48px;
+      overflow-wrap: anywhere;
     }
 
     a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-    /* ── HEADER ─────────────────────────────── */
-    .header {
-      margin-bottom: 20px;
-    }
-
+    .header { margin-bottom: 28px; }
     .header h1 {
-      font-size: 22pt;
+      font-size: 36px;
       font-weight: 700;
       letter-spacing: -0.5px;
       line-height: 1.1;
-      margin-bottom: 3px;
-    }
-
-    .header .label {
-      font-size: 9.5pt;
-      color: var(--muted);
       margin-bottom: 8px;
     }
+    .header .label { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+    .header-links { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .header-links span { margin: 0 5px; }
+    .header .summary { color: var(--text-2); max-width: 75ch; }
 
-    .header-links {
-      font-size: 8.5pt;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .header-links a { color: var(--accent); }
-    .header-links span { margin: 0 6px; color: var(--rule); }
-
-    .header .summary {
-      font-size: 9pt;
-      color: var(--text-2);
-      line-height: 1.5;
-      border-left: 2px solid var(--accent);
-      padding-left: 12px;
-      font-style: italic;
-    }
-
-    /* ── SECTION ─────────────────────────────── */
-    .section {
-      margin-bottom: 16px;
-    }
-
+    .section { margin-bottom: 24px; }
     .section-title {
-      font-size: 7.5pt;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
+      letter-spacing: 1px;
       color: var(--accent);
-      margin-bottom: 8px;
-      padding-bottom: 3px;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--rule);
     }
 
-    /* ── JOB ─────────────────────────────── */
-    .job { margin-bottom: 14px; }
-
-    .job-header {
+    .job { margin-bottom: 20px; }
+    .job-header, .edu-header, .project-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-
-    .job-position {
-      font-weight: 700;
-      font-size: 9.5pt;
-    }
-
-    .job-company {
-      font-size: 9.5pt;
-      font-style: italic;
-    }
-    .job-location {
-      font-size: 9pt;
-      color: var(--muted);
-    }
-
-    .job-sep { color: var(--muted); }
-
-    .job-dates {
-      font-size: 8.5pt;
-      color: var(--muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .job-summary {
-      font-size: 9pt;
-      color: var(--text-2);
-      margin: 2px 0 4px;
-      line-height: 1.45;
-    }
-
-    .job-highlights {
-      font-size: 9pt;
-      color: var(--text-2);
-      padding-left: 18px;
-      line-height: 1.4;
-    }
-
-    .job-highlights li { margin-bottom: 2px; }
-
-    /* ── EDUCATION ─────────────────────────────── */
-    .edu-item { margin-bottom: 10px; }
-
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 3px;
-    }
-
-    .edu-degree {
-      font-weight: 700;
-      font-size: 9.5pt;
-    }
-
-    .edu-school {
-      font-style: italic;
-    }
-
-    .edu-loc {
-      font-size: 9.5pt;
-      color: var(--muted);
-    }
-
-    .edu-dates {
-      font-size: 8.5pt;
-      color: var(--muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .edu-summary {
-      font-size: 9pt;
-      color: var(--text-2);
-      padding-left: 0;
-      margin-top: 2px;
-      line-height: 1.4;
-    }
-
-    /* ── SKILLS ─────────────────────────────── */
-    .skill-row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 4px;
-      font-size: 9pt;
-      align-items: baseline;
-    }
-
-    .skill-name {
-      font-weight: 700;
-      min-width: 150px;
-      flex-shrink: 0;
-      color: var(--text);
-    }
-
-    .skill-keywords {
-      color: var(--muted);
-    }
-
-    /* ── LANGUAGES ─────────────────────────────── */
-    .lang-row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 4px;
-      font-size: 9pt;
-      align-items: flex-start;
-    }
-
-    .lang-name {
-      font-weight: 700;
-      min-width: 130px;
-      flex-shrink: 0;
-      padding-top: 1px;
-    }
-
-    .lang-right {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-    }
-
-    .lang-level { color: var(--muted); }
-
-    .lang-detail {
-      font-size: 8pt;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    /* ── INTERESTS ─────────────────────────────── */
-    .interest-item {
+      gap: 12px;
       margin-bottom: 5px;
     }
-
-    .interest-name {
-      font-weight: 700;
-      font-size: 9pt;
-    }
-
-    .interest-summary {
-      font-size: 8.5pt;
-      color: var(--muted);
-      margin-top: 1px;
-      line-height: 1.4;
-    }
-
-    /* ── REFERENCES ─────────────────────────────── */
-    .ref-item {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 3px;
-      font-size: 9pt;
-      align-items: baseline;
-    }
-
-    .ref-name {
-      font-weight: 700;
-      min-width: 150px;
-      flex-shrink: 0;
-    }
-
-    .ref-role {
-      color: var(--muted);
-    }
-
-    /* ── PROJECTS ─────────────────────────────── */
-    .project-item { margin-bottom: 8px; }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-
-    .project-name {
-      font-weight: 700;
-      font-size: 9.5pt;
-    }
-
-    .project-link {
-      font-size: 8.5pt;
-      color: var(--accent);
-    }
-
-    .project-dates {
-      font-size: 8.5pt;
+    .job-header > div, .edu-header > div, .project-header > div { min-width: 0; }
+    .job-position, .edu-degree, .project-name { font-size: 1em; font-weight: 700; }
+    .job-company { font-weight: 600; }
+    .job-location, .edu-loc, .job-sep { color: var(--muted); }
+    .job-dates, .edu-dates, .project-dates {
+      font-size: 0.9em;
       color: var(--muted);
       white-space: nowrap;
       flex-shrink: 0;
     }
+    .job-summary, .edu-summary, .project-summary { color: var(--text-2); margin-top: 3px; }
+    .job-highlights, .project-highlights { color: var(--text-2); padding-left: 19px; margin-top: 5px; }
+    .job-highlights li, .project-highlights li { margin-bottom: 4px; }
+    .technologies { color: var(--text-2); margin-top: 8px; }
+    .project-description { color: var(--muted); margin-top: 3px; }
+    .edu-item, .project-item { margin-bottom: 10px; }
+    .edu-school { font-weight: 600; }
+    .project-link { font-size: 0.9em; margin-left: 6px; white-space: nowrap; }
 
-    .project-summary {
-      font-size: 9pt;
-      color: var(--text-2);
-      line-height: 1.4;
+    .skill-row, .lang-row, .ref-item {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 12px;
+      margin-bottom: 5px;
+    }
+    .skill-name, .lang-name, .interest-name, .ref-name { font-weight: 700; }
+    .skill-keywords, .lang-level, .lang-detail, .interest-summary, .ref-role { color: var(--text-2); }
+    .lang-detail::before { content: ' · '; }
+    .interest-item { margin-bottom: 5px; }
+    .interest-summary { margin-top: 2px; }
+
+    @media screen and (max-width: 600px) {
+      body { padding: 28px 20px; }
+      .header h1 { font-size: 30px; }
+      .header .label { font-size: 17px; }
+      .header-links { line-height: 1.9; }
+      .job-header, .edu-header, .project-header { flex-direction: column; gap: 2px; }
+      .skill-row, .lang-row, .ref-item { grid-template-columns: 1fr; gap: 1px; margin-bottom: 10px; }
     }
 
-    /* ── SCREEN ─────────────────────────────── */
-    @media screen {
-      body {
-        font-size: 15px;
-        max-width: 860px;
-        padding: 48px;
-        line-height: 1.6;
-      }
-
-      .header { margin-bottom: 28px; }
-      .header h1 { font-size: 36px; margin-bottom: 6px; }
-      .header .label { font-size: 15px; margin-bottom: 12px; }
-      .header-links { font-size: 14px; margin-bottom: 16px; }
-      .header .summary { font-size: 14px; padding-left: 16px; }
-
-      .section { margin-bottom: 28px; }
-      .section-title { font-size: 11px; margin-bottom: 14px; padding-bottom: 5px; }
-
-      .job { margin-bottom: 22px; }
-      .job-position { font-size: 15px; }
-      .job-company { font-size: 15px; }
-      .job-location { font-size: 14px; }
-      .job-dates { font-size: 13px; }
-      .job-summary { font-size: 14px; margin: 4px 0 8px; }
-      .job-highlights { font-size: 14px; padding-left: 22px; }
-      .job-highlights li { margin-bottom: 4px; }
-
-      .edu-item { margin-bottom: 16px; }
-      .edu-degree { font-size: 15px; }
-      .edu-dates { font-size: 13px; }
-      .edu-summary { font-size: 14px; }
-
-      .skill-row { font-size: 14px; margin-bottom: 6px; gap: 16px; }
-      .skill-name { min-width: 180px; }
-
-      .lang-row { font-size: 14px; margin-bottom: 6px; gap: 16px; }
-      .lang-name { min-width: 160px; }
-      .lang-detail { font-size: 13px; }
-
-      .interest-name { font-size: 14px; }
-      .interest-summary { font-size: 13px; }
-
-      .ref-item { font-size: 14px; margin-bottom: 6px; gap: 16px; }
-      .ref-name { min-width: 180px; }
-
-      .project-item { margin-bottom: 14px; }
-      .project-name { font-size: 15px; }
-      .project-dates { font-size: 13px; }
-      .project-summary { font-size: 14px; }
-    }
-
-    /* ── PRINT ─────────────────────────────── */
-    @page {
-      margin: 2cm;
-    }
+    @page { size: A4; margin: 16mm; }
 
     @media print {
       body {
-        max-width: 100%;
+        max-width: none;
         padding: 0;
-        font-size: 9pt;
-        line-height: 1.45;
-        orphans: 3;
-        widows: 3;
+        font-size: 10.5pt;
+        line-height: 1.4;
+        orphans: 2;
+        widows: 2;
       }
-
-      .header { margin-bottom: 16px; }
-      .header h1 { font-size: 18pt; }
-      .section { margin-bottom: 12px; }
-      .section-title { break-after: avoid; }
-      .job { margin-bottom: 12px; }
-      .job-header { break-after: avoid; }
-      .edu-item { break-inside: avoid; }
-      .project-item { break-inside: avoid; }
-      .ref-item { break-inside: avoid; }
+      .header { margin-bottom: 11pt; }
+      .header h1 { font-size: 22pt; margin-bottom: 3pt; }
+      .header .label { font-size: 12pt; margin-bottom: 5pt; }
+      .header-links { font-size: 8.5pt; margin-bottom: 6pt; }
+      .header .summary { max-width: none; }
+      .section { margin-bottom: 10pt; }
+      .section-title { font-size: 9pt; margin-bottom: 6pt; padding-bottom: 3pt; break-after: avoid; }
+      .job { margin-bottom: 12pt; break-inside: avoid; }
+      .job-header, .edu-header, .project-header { gap: 8pt; margin-bottom: 3pt; break-after: avoid; }
+      .job-summary, .edu-summary, .project-summary { margin-top: 2pt; }
+      .job-summary { break-after: avoid; }
+      .job-highlights, .project-highlights { margin-top: 3pt; padding-left: 13pt; }
+      .job-highlights li, .project-highlights li { margin-bottom: 3pt; break-inside: avoid; }
+      .technologies { margin-top: 5pt; break-inside: avoid; }
+      .edu-item { margin-bottom: 7pt; break-inside: avoid; }
+      .project-item { margin-bottom: 10pt; break-inside: avoid; }
+      .skill-row, .lang-row, .ref-item { grid-template-columns: 112pt minmax(0, 1fr); gap: 6pt; margin-bottom: 3pt; break-inside: avoid; }
+      .interest-item { break-inside: avoid; }
+      .interest-summary { display: inline; }
+      .interest-summary::before { content: ' — '; }
       .dl-pdf { display: none; }
+      a { color: inherit; }
     }
   </style>
 </head>
 <body>
-  <div class="header">
+<main>
+  <header class="header">
     <h1>${esc(b.name)}</h1>
     ${b.label ? `<div class="label">${esc(b.label)}</div>` : ''}
     <div class="header-links">
@@ -483,10 +265,11 @@ exports.render = function (resume) {
       ${b.location && b.location.city ? `<span>·</span>${esc([b.location.city, b.location.region].filter(Boolean).join(', '))}` : ''}
       ${github ? `<span>·</span><a href="${esc(github.url)}" target="_blank" rel="noopener noreferrer">github.com/${esc(github.username)}</a>` : ''}
       ${linkedin ? `<span>·</span><a href="${esc(linkedin.url)}" target="_blank" rel="noopener noreferrer">linkedin.com/in/${esc(linkedin.username)}</a>` : ''}
-      <span class="dl-pdf">·</span><a class="dl-pdf" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+      <span class="dl-pdf">·</span><a class="dl-pdf" href="resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+      <span class="dl-pdf">·</span><a class="dl-pdf" href="themes/index.html">Other layouts</a>
     </div>
     ${b.summary ? `<p class="summary">${esc(b.summary)}</p>` : ''}
-  </div>
+  </header>
 
   ${resume.work && resume.work.length ? `
   <div class="section">
@@ -494,16 +277,22 @@ exports.render = function (resume) {
     ${workHtml}
   </div>` : ''}
 
-  ${resume.education && resume.education.length ? `
-  <div class="section">
-    <h2 class="section-title">Education</h2>
-    ${eduHtml}
-  </div>` : ''}
-
   ${resume.skills && resume.skills.length ? `
   <div class="section">
     <h2 class="section-title">Skills</h2>
     ${skillsHtml}
+  </div>` : ''}
+
+  ${resume.projects && resume.projects.length ? `
+  <div class="section">
+    <h2 class="section-title">Projects</h2>
+    ${projectsHtml}
+  </div>` : ''}
+
+  ${resume.education && resume.education.length ? `
+  <div class="section">
+    <h2 class="section-title">Education</h2>
+    ${eduHtml}
   </div>` : ''}
 
   ${resume.languages && resume.languages.length ? `
@@ -524,11 +313,7 @@ exports.render = function (resume) {
     ${referencesHtml}
   </div>` : ''}
 
-  ${resume.projects && resume.projects.length ? `
-  <div class="section">
-    <h2 class="section-title">Projects</h2>
-    ${projectsHtml}
-  </div>` : ''}
+</main>
 </body>
 </html>`;
 };

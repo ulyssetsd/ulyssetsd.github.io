@@ -1,0 +1,42 @@
+:root { --ink: #30343c; --muted: #5f6672; --accent: #354d72; --rule: #d4dae2; }
+.cv { max-width: 880px; padding-top: 84px; }
+.masthead { text-align: center; margin-bottom: 58px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-size: 56px; font-weight: 400; letter-spacing: -.035em; }
+.headline { font-size: 12px; letter-spacing: .08em; margin-top: 15px; }
+.contacts { justify-content: center; column-gap: 16px; font-size: 10px; }
+.intro { font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; line-height: 1.6; margin: 28px auto 0; max-width: 57ch; }
+.section-heading { display: flex; align-items: center; justify-content: center; gap: 20px; font-family: 'Source Serif 4', Georgia, serif; font-size: 25px; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; margin-bottom: 28px; }
+.section-heading::before, .section-heading::after { content: ''; border-top: 1px solid var(--rule); flex: 1; }
+.entry-meta { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; margin-bottom: 12px; }
+.location { margin-top: 0; text-align: right; }
+.entry h3 { font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600; }
+.role { color: var(--muted); font-size: 13px; }
+.entry { font-size: 15px; line-height: 1.75; margin-bottom: 38px; }
+.highlights { list-style-type: '–  '; padding-left: 15px; }
+.technologies { margin-top: 17px; font-size: 12px; }
+.skill h3, .detail-row h3 { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; }
+@media screen and (max-width: 650px) {
+  .cv { padding-top: 45px; }
+  h1 { font-size: 43px; }
+  .headline { font-size: 11px; }
+  .intro { font-size: 18px; }
+  .entry-meta { display: block; }
+  .location { text-align: left; margin-top: 3px; }
+  .entry h3 { font-size: 23px; }
+  .section-heading { font-size: 24px; }
+}
+@media print {
+  .cv { max-width: none; padding: 0; }
+  .masthead { margin-bottom: 24pt; }
+  h1 { font-size: 32pt; }
+  .headline { font-size: 8.5pt; margin-top: 8pt; }
+  .contacts { font-size: 7.5pt; gap: 3pt 12pt; }
+  .intro { font-size: 12pt; margin-top: 15pt; }
+  .section-heading { font-size: 16pt; gap: 13pt; margin-bottom: 13pt; }
+  .entry { font-size: 10.5pt; line-height: 1.55; margin-bottom: 18pt; }
+  .entry h3 { font-size: 15pt; }
+  .entry-meta { font-size: 7.5pt; margin-bottom: 6pt; }
+  .role { font-size: 9.5pt; }
+  .technologies { font-size: 9pt; margin-top: 9pt; }
+  .skill h3, .detail-row h3 { font-size: 11pt; }
+}

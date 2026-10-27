@@ -1,0 +1,33 @@
+:root { --ink: #2c3036; --muted: #5f6670; --accent: #315b83; --rule: #c5d2dc; --paper: #fcfbf8; }
+body { font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.65; }
+.cv { max-width: 930px; }
+.masthead { border-top: 2px solid var(--accent); padding-top: 30px; }
+h1 { font-family: 'Source Serif 4', Georgia, serif; font-size: 68px; font-weight: 400; letter-spacing: -.055em; }
+.headline { font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: .015em; }
+.intro { font-size: 21px; line-height: 1.55; }
+.section-heading { font-family: 'Source Serif 4', Georgia, serif; text-transform: none; letter-spacing: -.02em; font-size: 30px; font-weight: 400; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.entry-meta { display: flex; justify-content: space-between; gap: 12px; }
+.location { margin-top: 0; text-align: right; }
+.entry h3 { font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600; }
+.entry { margin-bottom: 35px; }
+.technologies { padding-left: 13px; border-left: 1px solid var(--rule); }
+@media screen and (max-width: 650px) {
+  body { font-size: 17px; }
+  h1 { font-size: 48px; }
+  .intro { font-size: 19px; }
+  .entry-meta { display: block; }
+  .location { text-align: left; margin-top: 3px; }
+  .section-heading { font-size: 26px; }
+  .entry h3 { font-size: 23px; }
+}
+@media print {
+  body { font-size: 11pt; line-height: 1.5; }
+  .masthead { padding-top: 12pt; }
+  h1 { font-size: 38pt; }
+  .headline { font-size: 10pt; }
+  .intro { font-size: 12pt; }
+  .section-heading { font-size: 18pt; padding-bottom: 5pt; }
+  .entry { margin-bottom: 16pt; }
+  .entry h3 { font-size: 15pt; }
+  .technologies { padding-left: 8pt; }
+}
