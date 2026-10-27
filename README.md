@@ -12,18 +12,37 @@ Personal CV/resume website built with [JSON Resume](https://jsonresume.org/) and
 
 ## Development
 
+Use Node.js 22, matching CI.
+
 ```bash
-npm install
+npm ci
 
-# Preview in browser (live reload)
-npm run preview
+# Preview in browser
+npm start
 
-# Build HTML
+# Build HTML and PDF
+mkdir -p public
 npm run build
 
-# Generate PDF
-npm run pdf
+# Rebuild either output separately
+npm run build:html
+npm run build:pdf
 ```
+
+On Linux with a system Chromium installation (including Raspberry Pi), install
+dependencies and build using that browser:
+
+```bash
+PUPPETEER_SKIP_DOWNLOAD=true npm ci
+export PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+mkdir -p public
+npm run build
+```
+
+The theme uses an A4 print layout and a responsive screen layout. Before publishing
+content changes, inspect `public/resume.pdf` for page count and page breaks, and
+check `public/index.html` on desktop and mobile. The current CV targets two pages;
+longer content may require editorial changes to preserve readable type.
 
 ## Project Structure
 

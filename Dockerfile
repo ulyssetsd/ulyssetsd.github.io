@@ -1,6 +1,6 @@
 FROM nginx:alpine-slim
 
-# Copy pre-built site (built by CI or locally via npm run build && npm run pdf)
+# Copy pre-built site (built by CI or locally via npm run build)
 COPY public/ /usr/share/nginx/html/
 
 # Copy nginx config
