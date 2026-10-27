@@ -40,9 +40,20 @@ npm run build
 ```
 
 The theme uses an A4 print layout and a responsive screen layout. Before publishing
-content changes, inspect `public/resume.pdf` for page count and page breaks, and
-check `public/index.html` on desktop and mobile. The current CV targets two pages;
-longer content may require editorial changes to preserve readable type.
+content changes, inspect `public/resume.pdf` for readability and page breaks, and
+check `public/index.html` on desktop and mobile.
+
+## Content maintenance
+
+`resume.json` is the complete career record, including older roles, projects,
+technologies, education, languages, interests and references. Preserve the recorded
+facts when editing for clarity. There is no page-count target; keep the full record
+visible in both HTML and PDF.
+
+Store each role's technologies in its `keywords` array. The theme displays them
+under **Technologies**, so a separate `Technologies:` bullet in `highlights` is
+unnecessary. Project `highlights` and `keywords` are displayed as well. Keep dates,
+links and implementation details when reorganizing this information.
 
 ## Project Structure
 

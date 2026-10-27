@@ -19,6 +19,11 @@ function esc(str) {
     .replace(/"/g, '&quot;');
 }
 
+function renderTechnologies(keywords) {
+  if (!keywords || !keywords.length) return '';
+  return `<p class="technologies"><strong>Technologies:</strong> ${keywords.map(esc).join(' · ')}</p>`;
+}
+
 exports.pdfRenderOptions = {
   mediaType: 'print',
   format: 'A4',
@@ -46,6 +51,7 @@ exports.render = function (resume) {
         </div>
         ${job.summary ? `<p class="job-summary">${esc(job.summary)}</p>` : ''}
         ${highlights ? `<ul class="job-highlights">${highlights}</ul>` : ''}
+        ${renderTechnologies(job.keywords)}
       </div>`;
   }).join('');
 
@@ -95,11 +101,14 @@ exports.render = function (resume) {
       <div class="project-header">
         <div>
           <span class="project-name">${esc(proj.name)}</span>
-          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" aria-label="View ${esc(proj.name)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>` : ''}
+          ${proj.url ? `<a href="${esc(proj.url)}" class="project-link" aria-label="View ${esc(proj.name)}" target="_blank" rel="noopener noreferrer">View project ↗</a>` : ''}
         </div>
         ${proj.startDate ? `<span class="project-dates">${formatDate(proj.startDate)} – ${formatDate(proj.endDate)}</span>` : ''}
       </div>
+      ${proj.description ? `<p class="project-description">${esc(proj.description)}</p>` : ''}
       ${proj.summary ? `<p class="project-summary">${esc(proj.summary)}</p>` : ''}
+      ${proj.highlights && proj.highlights.length ? `<ul class="project-highlights">${proj.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      ${renderTechnologies(proj.keywords)}
     </div>`).join('');
 
   return `<!DOCTYPE html>
@@ -180,8 +189,10 @@ exports.render = function (resume) {
       flex-shrink: 0;
     }
     .job-summary, .edu-summary, .project-summary { color: var(--text-2); margin-top: 3px; }
-    .job-highlights { color: var(--text-2); padding-left: 19px; margin-top: 5px; }
-    .job-highlights li { margin-bottom: 4px; }
+    .job-highlights, .project-highlights { color: var(--text-2); padding-left: 19px; margin-top: 5px; }
+    .job-highlights li, .project-highlights li { margin-bottom: 4px; }
+    .technologies { color: var(--text-2); margin-top: 8px; }
+    .project-description { color: var(--muted); margin-top: 3px; }
     .edu-item, .project-item { margin-bottom: 10px; }
     .edu-school { font-weight: 600; }
     .project-link { font-size: 0.9em; margin-left: 6px; white-space: nowrap; }
@@ -207,14 +218,14 @@ exports.render = function (resume) {
       .skill-row, .lang-row, .ref-item { grid-template-columns: 1fr; gap: 1px; margin-bottom: 10px; }
     }
 
-    @page { size: A4; margin: 13mm 14mm; }
+    @page { size: A4; margin: 16mm; }
 
     @media print {
       body {
         max-width: none;
         padding: 0;
-        font-size: 10pt;
-        line-height: 1.32;
+        font-size: 10.5pt;
+        line-height: 1.4;
         orphans: 2;
         widows: 2;
       }
@@ -225,12 +236,15 @@ exports.render = function (resume) {
       .header .summary { max-width: none; }
       .section { margin-bottom: 10pt; }
       .section-title { font-size: 9pt; margin-bottom: 6pt; padding-bottom: 3pt; break-after: avoid; }
-      .job { margin-bottom: 9pt; break-inside: avoid; }
+      .job { margin-bottom: 12pt; break-inside: avoid; }
       .job-header, .edu-header, .project-header { gap: 8pt; margin-bottom: 3pt; break-after: avoid; }
       .job-summary, .edu-summary, .project-summary { margin-top: 2pt; }
-      .job-highlights { margin-top: 3pt; padding-left: 13pt; }
-      .job-highlights li { margin-bottom: 2pt; }
-      .edu-item, .project-item { margin-bottom: 5pt; break-inside: avoid; }
+      .job-summary { break-after: avoid; }
+      .job-highlights, .project-highlights { margin-top: 3pt; padding-left: 13pt; }
+      .job-highlights li, .project-highlights li { margin-bottom: 3pt; break-inside: avoid; }
+      .technologies { margin-top: 5pt; break-inside: avoid; }
+      .edu-item { margin-bottom: 7pt; break-inside: avoid; }
+      .project-item { margin-bottom: 10pt; break-inside: avoid; }
       .skill-row, .lang-row, .ref-item { grid-template-columns: 112pt minmax(0, 1fr); gap: 6pt; margin-bottom: 3pt; break-inside: avoid; }
       .interest-item { break-inside: avoid; }
       .interest-summary { display: inline; }
@@ -270,7 +284,7 @@ exports.render = function (resume) {
 
   ${resume.projects && resume.projects.length ? `
   <div class="section">
-    <h2 class="section-title">Personal project</h2>
+    <h2 class="section-title">Projects</h2>
     ${projectsHtml}
   </div>` : ''}
 
