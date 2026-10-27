@@ -265,7 +265,8 @@ exports.render = function (resume) {
       ${b.location && b.location.city ? `<span>·</span>${esc([b.location.city, b.location.region].filter(Boolean).join(', '))}` : ''}
       ${github ? `<span>·</span><a href="${esc(github.url)}" target="_blank" rel="noopener noreferrer">github.com/${esc(github.username)}</a>` : ''}
       ${linkedin ? `<span>·</span><a href="${esc(linkedin.url)}" target="_blank" rel="noopener noreferrer">linkedin.com/in/${esc(linkedin.username)}</a>` : ''}
-      <span class="dl-pdf">·</span><a class="dl-pdf" href="/resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+      <span class="dl-pdf">·</span><a class="dl-pdf" href="resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+      <span class="dl-pdf">·</span><a class="dl-pdf" href="themes/index.html">Other layouts</a>
     </div>
     ${b.summary ? `<p class="summary">${esc(b.summary)}</p>` : ''}
   </header>

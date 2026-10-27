@@ -1,9 +1,11 @@
 {
   "scripts": {
     "start": "resume serve --theme ./themes/editorial-minimal",
-    "build": "npm run build:html && npm run build:pdf",
+    "build": "npm run build:html && npm run build:pdf && npm run build:themes",
     "build:html": "resume export public/index.html --theme ./themes/editorial-minimal",
-    "build:pdf": "resume export public/resume.pdf --theme ./themes/editorial-minimal"
+    "build:pdf": "resume export public/resume.pdf --theme ./themes/editorial-minimal",
+    "build:themes": "node scripts/build-themes.js",
+    "check:themes": "node scripts/check-themes.js"
   },
   "devDependencies": {
     "puppeteer": "^24.38.0",

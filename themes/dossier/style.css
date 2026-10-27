@@ -1,0 +1,43 @@
+:root { --ink: #23333a; --muted: #566971; --accent: #356776; --rule: #cddadd; }
+.cv { max-width: 1050px; }
+.masthead { display: grid; grid-template-columns: 1fr 265px; column-gap: 40px; border-bottom: 1px solid var(--rule); padding-bottom: 32px; }
+h1 { font-size: 49px; font-weight: 500; letter-spacing: -.05em; }
+.headline { font-size: 14px; margin-top: 12px; }
+.contacts { display: block; margin-top: 2px; border-left: 1px solid var(--rule); padding-left: 20px; }
+.contacts li { margin-bottom: 4px; }
+.intro { grid-column: 1 / -1; font-size: 16px; margin-top: 29px; }
+.section-heading { display: flex; align-items: center; gap: 18px; font-size: 11px; letter-spacing: .14em; }
+.section-heading::after { content: ''; flex: 1; border-top: 1px solid var(--rule); }
+.entry { display: grid; grid-template-columns: 140px minmax(0,1fr); column-gap: 28px; }
+.entry-meta { font-family: 'Liberation Mono', monospace; font-size: 10px; padding-top: 4px; }
+.dates { color: var(--accent); font-weight: 700; }
+.location { font-family: 'Inter', sans-serif; font-size: 10px; margin-top: 8px; }
+.entry-main { border-left: 1px solid var(--rule); padding-left: 28px; }
+.entry h3 { font-size: 22px; }
+.role { color: var(--muted); font-weight: 400; }
+.skill, .detail-row { grid-template-columns: 168px minmax(0,1fr); gap: 28px; }
+@media screen and (max-width: 650px) {
+  .masthead { display: block; }
+  h1 { font-size: 43px; }
+  .contacts { margin-top: 20px; }
+  .entry { grid-template-columns: 1fr; }
+  .entry-meta { margin-bottom: 12px; }
+  .entry-main { padding-left: 16px; }
+  .entry h3 { font-size: 22px; }
+  .skill, .detail-row { grid-template-columns: 1fr; gap: 3px; }
+}
+@media print {
+  h1 { font-size: 31pt; }
+  .headline { font-size: 9pt; }
+  .masthead { grid-template-columns: 1fr 165pt; gap: 14pt; padding-bottom: 14pt; }
+  .contacts { padding-left: 12pt; margin-top: 0; }
+  .contacts li { margin-bottom: 2pt; }
+  .intro { font-size: 10.5pt; margin-top: 6pt; }
+  .section-heading { font-size: 8pt; gap: 12pt; }
+  .entry { grid-template-columns: 78pt minmax(0,1fr); column-gap: 15pt; }
+  .entry-meta { font-size: 7.5pt; padding-top: 2pt; }
+  .location { font-size: 7.5pt; margin-top: 5pt; }
+  .entry-main { padding-left: 15pt; }
+  .entry h3 { font-size: 13pt; }
+  .skill, .detail-row { grid-template-columns: 100pt minmax(0,1fr); gap: 15pt; }
+}

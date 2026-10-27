@@ -1,0 +1,7 @@
+{
+  "name": "jsonresume-theme-dossier",
+  "version": "1.0.0",
+  "description": "Dossier \u2014 minimal typographic resume theme",
+  "main": "index.js",
+  "license": "MIT"
+}
